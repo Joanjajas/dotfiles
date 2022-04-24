@@ -1,0 +1,21 @@
+import:
+  - .config/alacritty/themes/seashells.yaml
+
+cursor:
+  style: Block
+
+font:
+  bold:
+    family: Caskaydia Cove Nerd Font
+  italic:
+    family: Caskaydia Cove Nerd Font
+  normal:
+    family: Caskaydia Cove Nerd Font
+    style: Bold
+  size: 7.5
+
+window:
+  padding:
+    x: 5
+    y: 5
+  opacity: 0.3
