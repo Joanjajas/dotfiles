@@ -36,7 +36,6 @@ g.nvim_tree_icons = {
 require('nvim-tree').setup {
     disable_netrw = true,
     hijack_netrw = true,
-    auto_close = false,
     hijack_cursor = true,
 
     git = {
@@ -67,7 +66,6 @@ require('nvim-tree').setup {
     },
 
     view = {
-        auto_resize = true,
         side = "left",
         width = 30,
 
