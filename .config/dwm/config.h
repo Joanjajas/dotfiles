@@ -143,7 +143,7 @@ static Key keys[] = {
     // ------------------- Apps --------------------
 
     // Browser
-    { MODKEY, XK_b, spawn, SHCMD("opera") },
+    { MODKEY, XK_b, spawn, SHCMD("firefox") },
 
     // ----------------- Hardware ------------------
 
