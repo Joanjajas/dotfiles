@@ -8,7 +8,6 @@ require ('paq') {
     'windwp/nvim-autopairs';          -- Auto pairs
     'kyazdani42/nvim-web-devicons';   -- Icons
     'nvim-lualine/lualine.nvim';      -- Status line
-    'lewis6991/gitsigns.nvim';        -- Git integration
     'nvim-lua/plenary.nvim';
 
 

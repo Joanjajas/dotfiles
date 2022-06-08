@@ -5,7 +5,6 @@ require('settings')
 
 -- Core Plugins
 require('plugins/nvim-tree')
-require('plugins/gitsigns')
 require('plugins/autopairs')
 require('plugins/lualine')
 
