@@ -103,7 +103,7 @@ sudo pacman --noconfirm --needed -S xorg xorg-xinit libev libconfig picom polkit
 sudo pacman --noconfirm --needed -S feh neofetch htop dmenu macchanger 2>/dev/null
 sudo pacman --noconfirm --needed -S firefox alacritty ranger neovim 2>/dev/null
 sudo pacman --noconfirm --needed -S brightnessctl alsa-utils 2>/dev/null
-sudo pacman --noconfirm --needed -S zsh lsd bat dust arc-gtk-theme 2>/dev/null
+sudo pacman --noconfirm --needed -S zsh exa bat dust arc-gtk-theme 2>/dev/null
 
 
 printf "%s\n##################################################################\n"     $BLUE
