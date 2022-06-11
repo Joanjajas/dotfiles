@@ -43,7 +43,7 @@ export RUSTUP_HOME=~/.config/rustup
 export HISTFILE=~/.cache/zsh/zsh_history
 export LESSHISTFILE=-
 
-alias ls=lsd
+alias l='lsd -Aalh --blocks=permission,user,size,date,name --date +%e" "%b'
 alias cat=bat
 alias du=dust
 alias gs='git status'
