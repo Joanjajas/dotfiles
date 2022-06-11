@@ -58,6 +58,10 @@ require('nvim-tree').setup {
         }
     },
 
+    git = {
+        enable = false,
+    },
+
     view = {
         side = "left",
         width = 30,
