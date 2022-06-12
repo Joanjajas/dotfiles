@@ -1,7 +1,6 @@
 require "paq" {
     'savq/paq-nvim';
 
-    'marko-cerovac/material.nvim';
     'kyazdani42/nvim-tree.lua';
     'windwp/nvim-autopairs';
     'neovim/nvim-lspconfig';
@@ -10,4 +9,6 @@ require "paq" {
     'hrsh7th/cmp-path';
     'hrsh7th/nvim-cmp';
     'onsails/lspkind.nvim';
+    'navarasu/onedark.nvim';
 }
+

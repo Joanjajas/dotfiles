@@ -6,9 +6,6 @@ require('nvim-tree').setup {
   update_cwd = true,
 
   view = {
-    side = "right",
-    width = 40,
-
     mappings = {
       list = {
         { key = {"q"}, cb = ":q!<CR>", mode = "n"},
@@ -24,12 +21,6 @@ require('nvim-tree').setup {
   diagnostics = {
     enable = true,
     show_on_dirs = true,
-    icons = {
-      hint = "",
-      info = "",
-      warning = "",
-      error = "",
-    },
   },
 
   git = {

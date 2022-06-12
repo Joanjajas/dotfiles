@@ -11,7 +11,5 @@ opt.tabstop = 4
 opt.splitbelow = true
 opt.splitright = true
 
-g.material_style = 'deep ocean'
-
-cmd [[colorscheme material]]
+cmd [[colorscheme onedark]]
 
