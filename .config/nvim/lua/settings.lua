@@ -1,9 +1,6 @@
 local cmd = vim.cmd
-local exec = vim.api.nvim_exec
-local fn = vim.fn
-local g = vim.g
 local opt = vim.opt
-
+local g = vim.g
 
 opt.rnu = true
 opt.mouse = 'a'
@@ -14,4 +11,7 @@ opt.tabstop = 4
 opt.splitbelow = true
 opt.splitright = true
 
-cmd [[colorscheme gotham]]
+g.material_style = 'deep ocean'
+
+cmd [[colorscheme material]]
+

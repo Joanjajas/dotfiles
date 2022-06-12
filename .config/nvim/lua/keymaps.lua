@@ -48,3 +48,4 @@ map('n', '<Leader>R', ':%s/\\<\\>//gc | noh <left><left><left>' ..
 
 -- Terminal mode maps
 map('t', 'kj', '<C-\\><C-n>', default_opts)
+
