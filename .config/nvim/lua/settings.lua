@@ -1,4 +1,3 @@
-local cmd = vim.cmd
 local opt = vim.opt
 local g = vim.g
 
@@ -10,6 +9,4 @@ opt.shiftwidth = 4
 opt.tabstop = 4
 opt.splitbelow = true
 opt.splitright = true
-
-cmd [[colorscheme onedark]]
 

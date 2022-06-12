@@ -1,14 +1,20 @@
 require "paq" {
     'savq/paq-nvim';
 
+    -- Core plugins
     'kyazdani42/nvim-tree.lua';
-    'windwp/nvim-autopairs';
     'neovim/nvim-lspconfig';
+    'hrsh7th/nvim-cmp';
     'hrsh7th/cmp-nvim-lsp';
     'hrsh7th/cmp-buffer';
     'hrsh7th/cmp-path';
-    'hrsh7th/nvim-cmp';
+    'nvim-lualine/lualine.nvim';
+    'saadparwaiz1/cmp_luasnip';
+    'L3MON4D3/LuaSnip';
+    'windwp/nvim-autopairs';
     'onsails/lspkind.nvim';
+
+    -- Colorschemes
     'navarasu/onedark.nvim';
 }
 

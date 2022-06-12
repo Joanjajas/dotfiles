@@ -1,8 +1,14 @@
-local cmp = require'cmp'
+local cmp = require('cmp')
+local luasnip = require('luasnip')
 local lspkind = require('lspkind')
+
 local winhighlight = {
   winhighlight = "Normal:NormalFloat,FloatBorder:FloatBorder,CursorLine:PmenuSel",
 }
+
+local function T(str)
+  return vim.api.nvim_replace_termcodes(str, true, true, true)
+end
 
 cmp.setup({
   formatting = {
@@ -21,21 +27,27 @@ cmp.setup({
 
   snippet = {
     expand = function(args)
-      vim.fn["vsnip#anonymous"](args.body)
+      require('luasnip').lsp_expand(args.body)
     end,
   },
 
   mapping = cmp.mapping.preset.insert({
-    ['<Tab>'] = cmp.mapping.select_next_item(),
+    ["<Tab>"] = function(fallback)
+      if cmp.visible() then
+        cmp.select_next_item()
+      elseif luasnip.expand_or_jumpable() then
+        vim.fn.feedkeys(T("<Plug>luasnip-expand-or-jump"), "")
+      end
+    end,
+    
     ['<CR>'] = cmp.mapping.confirm({ select = true }),
   }),
 
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'vsnip' },
+    { name = 'luasnip' },
     { name = 'path' },
     { name = 'buffer' },
-    { name = 'cmdline' },
   })
 })
 
