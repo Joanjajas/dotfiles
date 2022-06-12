@@ -7,9 +7,8 @@ require('plugins')
 require('config/nvimtree')
 require('config/cmp')
 require('config/lsp')
-require('config/luasnip')
-require('config/lualine')
-require('config/autopairs')
+require('config/default')
 
 -- Colorschemes
 require('config/onedark')
+

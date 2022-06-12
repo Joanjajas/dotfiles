@@ -11,6 +11,8 @@ local function T(str)
 end
 
 cmp.setup({
+  preselect = cmp.PreselectMode.None,
+
   formatting = {
     format = lspkind.cmp_format({
       with_text = true,
@@ -18,6 +20,10 @@ cmp.setup({
         return vim_item
       end
     })
+  },
+
+  view = {
+      entries = {name = 'custom', selection_order = 'near_cursor' } 
   },
 
   window = {
@@ -37,6 +43,8 @@ cmp.setup({
         cmp.select_next_item()
       elseif luasnip.expand_or_jumpable() then
         vim.fn.feedkeys(T("<Plug>luasnip-expand-or-jump"), "")
+      else
+        vim.fn.feedkeys(T("<Tab>"), "n")
       end
     end,
     

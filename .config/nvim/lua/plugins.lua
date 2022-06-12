@@ -16,5 +16,8 @@ require "paq" {
 
     -- Colorschemes
     'navarasu/onedark.nvim';
+
+    'nvim-lua/plenary.nvim';
+    'nvim-telescope/telescope.nvim';
 }
 
