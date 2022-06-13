@@ -7,8 +7,10 @@ require('plugins')
 require('config/nvimtree')
 require('config/cmp')
 require('config/lsp')
-require('config/default')
 
 -- Colorschemes
 require('config/onedark')
 
+-- Extra Plugins
+require('config/default')
+require('config/todo')

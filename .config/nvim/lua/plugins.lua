@@ -8,17 +8,20 @@ require "paq" {
     'hrsh7th/cmp-nvim-lsp';
     'hrsh7th/cmp-buffer';
     'hrsh7th/cmp-path';
-    'nvim-lualine/lualine.nvim';
     'saadparwaiz1/cmp_luasnip';
     'L3MON4D3/LuaSnip';
     'windwp/nvim-autopairs';
-    'onsails/lspkind.nvim';
 
     -- Colorschemes
     'navarasu/onedark.nvim';
 
+    -- Extra Plugins
     'nvim-lua/plenary.nvim';
     'nvim-telescope/telescope.nvim';
     'kyazdani42/nvim-web-devicons';
+    'folke/todo-comments.nvim';
+    'folke/trouble.nvim';
+    'nvim-lualine/lualine.nvim';
+    'onsails/lspkind.nvim';
 }
 
