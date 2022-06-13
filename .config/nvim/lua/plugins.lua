@@ -23,5 +23,6 @@ require "paq" {
     'folke/trouble.nvim';
     'nvim-lualine/lualine.nvim';
     'onsails/lspkind.nvim';
+    'lukas-reineke/indent-blankline.nvim';
 }
 

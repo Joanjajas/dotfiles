@@ -14,3 +14,4 @@ require('config/onedark')
 -- Extra Plugins
 require('config/default')
 require('config/todo')
+require('config/telescope')
