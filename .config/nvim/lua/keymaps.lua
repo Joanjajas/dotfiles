@@ -30,6 +30,7 @@ map('n', ';;', 'A;<esc>', default_opts)
 map('n', '<Leader>f', ':Telescope find_files<CR>', default_opts)
 map('n', '<Leader>g', ':Telescope git_commits<CR>', default_opts)
 map('n', '<Leader>k', ':TodoTelescope<CR>', default_opts)
+map('n', '<Leader>l', ':Telescope live_grep<CR>', default_opts)
 map('n', '<Leader>d', ':Trouble<CR>', default_opts)
 
 map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)
