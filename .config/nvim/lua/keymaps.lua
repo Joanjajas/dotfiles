@@ -27,7 +27,8 @@ map('n', '<F8>', ':tabe | term<CR>', default_opts)
 map('n', '<BS>', ':q!<CR>', default_opts)
 map('n', '<Leader>', ':w<CR>', default_opts)
 map('n', ';;', 'A;<esc>', default_opts)
-map('n', 'f', 'g;g;', default_opts)
+map('n', '<Leader>f', ':Telescope find_files<CR>', default_opts)
+map('n', '<Leader>g', ':Telescope git_commits<CR>', default_opts)
 
 map('n', '<C-n>', ':NvimTreeToggle<CR>', default_opts)
 

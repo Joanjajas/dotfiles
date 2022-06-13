@@ -6,11 +6,12 @@ require('nvim-tree').setup {
   update_cwd = true,
 
   view = {
+    side = "right",
+
     mappings = {
       list = {
         { key = {"q"}, cb = ":q!<CR>", mode = "n"},
         { key = {"<BS>"}, cb = ":q!<CR>", mode = "n"},
-        { key = {"x"}, cb = tree_cb('close_node') },
         { key = {"s"}, cb = tree_cb('vsplit') },
         { key = {"i"}, cb = tree_cb('split') },
         { key = {"t"}, cb = tree_cb('tabnew') },

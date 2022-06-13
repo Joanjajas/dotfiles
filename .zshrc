@@ -47,7 +47,7 @@ alias l='exa -la --icons --no-time'
 alias cat=bat
 alias du=dust
 alias gs='git status'
-# alias nvim='nvim +NvimTreeToggle'
+alias nvim='nvim +NvimTreeToggle'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
