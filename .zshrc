@@ -44,6 +44,7 @@ export HISTFILE=~/.cache/zsh/zsh_history
 export LESSHISTFILE=-
 
 alias l='exa -la --icons --no-time'
+alias fd='fd -ui'
 alias cat=bat
 alias du=dust
 alias gs='git status'
