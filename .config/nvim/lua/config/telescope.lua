@@ -7,6 +7,7 @@ require('telescope').setup{
         ["i"] = actions.file_split,
         ["s"] = actions.file_vsplit,
         ["t"] = actions.file_tab,
+        ["o"] = actions.select_default,
       }
     }
   },
