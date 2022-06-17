@@ -9,3 +9,5 @@
 !ranger/
 !gtk-3.0/
 !dwm/
+!.xinitrc
+!.Xauthority
