@@ -33,6 +33,6 @@ fi
 
 setxkbmap es
 xrandr --dpi 115
-feh --no-fehbg --bg-scale "$HOME/.wallpapers/fondo.jpg" & 
+feh --no-fehbg --bg-scale "$HOME/.config/wallpapers/fondo.jpg" & 
 picom --experimental-backends &
 exec dwm
