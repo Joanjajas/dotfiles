@@ -1,6 +1,6 @@
 # Archlinux installation and configuration guide
 
-![Archlinux](.wallpapers/archlinux.png)
+![Archlinux](.config/.wallpapers/archlinux.png)
 
 - [Installation](#installation)
 - [Configuration](#configuration)

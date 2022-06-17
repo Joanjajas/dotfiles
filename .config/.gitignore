@@ -3,11 +3,10 @@
 !.gitignore
 !nvim/
 !picom/
-!neofetch/
 !general/
 !alacritty/
-!ranger/
 !gtk-3.0/
+!wallpapers/
 !dwm/
 !.xinitrc
 !.Xauthority
