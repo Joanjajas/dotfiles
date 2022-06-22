@@ -87,7 +87,7 @@ copy_dotfiles() {
 }
 
 window_manager() {
-    git clone https://github.com/joanjajas/dotfiles ~/ >/dev/null
+    git clone https://github.com/joanjajas/dwm ~/dwm >/dev/null
     sudo cp ~/dwm/dwm /usr/local/bin
 }
 
