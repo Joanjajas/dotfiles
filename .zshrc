@@ -49,7 +49,6 @@ alias fd='fd -ui'
 alias cat=bat
 alias du=dust
 alias gs='git status'
-alias nvim='nvim +NvimTreeToggle'
 alias startx='startx ~/.config/.xinitrc'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
