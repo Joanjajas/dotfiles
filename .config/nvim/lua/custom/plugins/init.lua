@@ -1,11 +1,17 @@
 local overrides = require "custom.plugins.overrides"
 
 return {
-  -- Override plugin definition options
   ["neovim/nvim-lspconfig"] = {
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.plugins.lspconfig"
+    end,
+  },
+
+  ["jose-elias-alvarez/null-ls.nvim"] = {
+    after = "nvim-lspconfig",
+    config = function()
+      require "custom.plugins.null-ls"
     end,
   },
 
@@ -21,6 +27,6 @@ return {
     override_options = overrides.buffline,
   },
 
-  ["goolord/alpha-nvim"] = false
+  ["goolord/alpha-nvim"] = false,
 }
 
