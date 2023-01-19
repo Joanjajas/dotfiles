@@ -7,3 +7,13 @@ nvim/*
 !nvim/lua/
 nvim/lua/*
 !nvim/lua/custom/
+
+!oh-my-zsh/
+oh-my-zsh/*
+!oh-my-zsh/custom/
+oh-my-zsh/custom/*
+!oh-my-zsh/custom/themes/
+oh-my-zsh/custom/themes/*
+!oh-my-zsh/custom/themes/powerlevel10k/
+oh-my-zsh/custom/themes/powerlevel10k/*
+!oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
