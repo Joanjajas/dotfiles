@@ -8,7 +8,7 @@ M.mappings = require "custom.mappings"
 
 M.ui = {
   theme = "radium",
-  hl_add = highlights.add
+  hl_add = highlights.add,
 }
 
 return M

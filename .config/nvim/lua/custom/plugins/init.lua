@@ -19,6 +19,10 @@ return {
     disable = false,
   },
 
+  ["lukas-reineke/indent-blankline.nvim"] = {
+    override_options = overrides.blankline,
+  },
+
   ["nvim-tree/nvim-tree.lua"] = {
     override_options = overrides.nvimtree,
   },
@@ -29,4 +33,3 @@ return {
 
   ["goolord/alpha-nvim"] = false,
 }
-

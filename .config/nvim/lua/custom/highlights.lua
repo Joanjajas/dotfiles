@@ -3,12 +3,12 @@ local M = {}
 M.add = {
   TabLine = {
     bg = "bg",
-    fg = "grey"
+    fg = "grey",
   },
 
   TabLineFill = {
-    bg = "bg"
-  }
+    bg = "bg",
+  },
 }
 
 return M
