@@ -65,7 +65,7 @@ local options = {
   buttons = {
     type = "group",
     val = {
-      button("SPC  e ", "  File Explorer  ", ":NvimTreeFocus<CR>"),
+      button("SPC f e", "  File Explorer  ", ":NvimTreeFocus<CR>"),
       button("SPC f f", "  Find File  ", ":Telescope find_files<CR>"),
       button("SPC f o", "  Recent File  ", ":Telescope oldfiles<CR>"),
       button("SPC f w", "  Find Word  ", ":Telescope live_grep<CR>"),

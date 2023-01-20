@@ -28,6 +28,8 @@ M.ui = {
 
 M.nvimtree = {
   open_on_setup = true,
+  open_on_setup_file = true,
+  ignore_buffer_on_setup = true,
 
   view = {
     side = "right",

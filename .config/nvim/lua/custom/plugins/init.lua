@@ -17,17 +17,13 @@ return {
 
   ["goolord/alpha-nvim"] = {
     disable = false,
-    event = "VimEnter",
     config = function()
       require "custom.plugins.alpha"
     end,
   },
 
-  ["folke/which-key.nvim"] = {
-    disable = false,
-  },
-
   ["nvim-tree/nvim-tree.lua"] = {
+    event = "VimEnter",
     override_options = overrides.nvimtree,
   },
 
@@ -41,5 +37,9 @@ return {
 
   ["NvChad/ui"] = {
     override_options = overrides.ui,
+  },
+
+  ["folke/which-key.nvim"] = {
+    disable = false,
   },
 }
