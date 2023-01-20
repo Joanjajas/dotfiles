@@ -4,6 +4,16 @@ M.blankline = {
   show_current_context = false,
 }
 
+M.cmp = {
+  preselect = false,
+}
+
+M.buffline = {
+  tabufline = {
+    enabled = false,
+  },
+}
+
 M.nvimtree = {
   view = {
     side = "right",
@@ -13,12 +23,6 @@ M.nvimtree = {
         { key = { "<BS>" }, cb = ":q!<CR>", mode = "n" },
       },
     },
-  },
-}
-
-M.buffline = {
-  tabufline = {
-    enabled = false,
   },
 }
 

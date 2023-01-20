@@ -15,8 +15,8 @@ return {
     end,
   },
 
-  ["folke/which-key.nvim"] = {
-    disable = false,
+  ["hrsh7th/nvim-cmp"] = {
+    override_options = overrides.cmp,
   },
 
   ["lukas-reineke/indent-blankline.nvim"] = {
@@ -29,6 +29,10 @@ return {
 
   ["NvChad/ui"] = {
     override_options = overrides.buffline,
+  },
+
+  ["folke/which-key.nvim"] = {
+    disable = false,
   },
 
   ["goolord/alpha-nvim"] = false,
