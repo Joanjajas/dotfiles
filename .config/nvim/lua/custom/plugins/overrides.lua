@@ -8,13 +8,15 @@ M.cmp = {
   preselect = false,
 }
 
-M.buffline = {
+M.ui = {
   tabufline = {
     enabled = false,
   },
 }
 
 M.nvimtree = {
+  open_on_setup = true,
+
   view = {
     side = "right",
 

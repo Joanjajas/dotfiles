@@ -15,6 +15,11 @@ return {
     end,
   },
 
+  ["nvim-tree/nvim-tree.lua"] = {
+    event = "VimEnter",
+    override_options = overrides.nvimtree,
+  },
+
   ["hrsh7th/nvim-cmp"] = {
     override_options = overrides.cmp,
   },
@@ -23,12 +28,8 @@ return {
     override_options = overrides.blankline,
   },
 
-  ["nvim-tree/nvim-tree.lua"] = {
-    override_options = overrides.nvimtree,
-  },
-
   ["NvChad/ui"] = {
-    override_options = overrides.buffline,
+    override_options = overrides.ui,
   },
 
   ["folke/which-key.nvim"] = {
