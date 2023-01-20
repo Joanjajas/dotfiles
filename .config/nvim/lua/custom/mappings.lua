@@ -19,4 +19,22 @@ M.general = {
   },
 }
 
+M.lspconfig = {
+  n = {
+    ["gn"] = {
+      function()
+        vim.diagnostic.goto_next()
+      end,
+      "goto_next",
+    },
+
+    ["gN"] = {
+      function()
+        vim.diagnostic.goto_prev()
+      end,
+      "goto_next",
+    },
+  },
+}
+
 return M
