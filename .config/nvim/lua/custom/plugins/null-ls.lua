@@ -9,6 +9,7 @@ local b = null_ls.builtins
 local sources = {
   b.formatting.rustfmt,
   b.formatting.stylua,
+  b.formatting.shfmt,
 }
 
 null_ls.setup {
