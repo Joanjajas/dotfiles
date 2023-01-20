@@ -2,6 +2,18 @@ local M = {}
 
 M.blankline = {
   show_current_context = false,
+  filetype_exclude = {
+    "help",
+    "terminal",
+    "alpha",
+    "packer",
+    "lspinfo",
+    "TelescopePrompt",
+    "TelescopeResults",
+    "mason",
+    "NvimTree",
+    "",
+  },
 }
 
 M.cmp = {
@@ -19,6 +31,7 @@ M.nvimtree = {
 
   view = {
     side = "right",
+    preserve_window_proportions = true,
 
     mappings = {
       list = {
