@@ -20,20 +20,20 @@ M.cmp = {
   preselect = false,
 }
 
-M.ui = {
-  tabufline = {
-    enabled = false,
-  },
-}
-
 M.nvimtree = {
   open_on_setup = true,
   open_on_setup_file = true,
   ignore_buffer_on_setup = true,
+  ignore_ft_on_setup = { "nvdash" },
 
   view = {
     side = "right",
+    adaptive_size = true,
     preserve_window_proportions = true,
+
+    width = {
+      max = 40,
+    },
 
     mappings = {
       list = {

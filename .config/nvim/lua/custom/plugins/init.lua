@@ -2,6 +2,9 @@ local overrides = require "custom.plugins.overrides"
 
 return {
   ["neovim/nvim-lspconfig"] = {
+    dependencies = {
+      "jose-elias-alvarez/null-ls.nvim",
+    },
     config = function()
       require "plugins.configs.lspconfig"
       require "custom.plugins.lspconfig"
@@ -9,16 +12,8 @@ return {
   },
 
   ["jose-elias-alvarez/null-ls.nvim"] = {
-    after = "nvim-lspconfig",
     config = function()
       require "custom.plugins.null-ls"
-    end,
-  },
-
-  ["goolord/alpha-nvim"] = {
-    disable = false,
-    config = function()
-      require "custom.plugins.alpha"
     end,
   },
 
@@ -35,11 +30,7 @@ return {
     override_options = overrides.blankline,
   },
 
-  ["NvChad/ui"] = {
-    override_options = overrides.ui,
-  },
-
   ["folke/which-key.nvim"] = {
-    disable = false,
+    enabled = true,
   },
 }
