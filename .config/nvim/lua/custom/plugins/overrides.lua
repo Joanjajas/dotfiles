@@ -12,6 +12,8 @@ M.blankline = {
     "TelescopeResults",
     "mason",
     "NvimTree",
+    "Lazy",
+    "nvdash",
     "",
   },
 }
