@@ -17,6 +17,13 @@ return {
     end,
   },
 
+  ["folke/todo-comments.nvim"] = {
+    event = "VimEnter",
+    config = function()
+      require("todo-comments").setup()
+    end,
+  },
+
   ["nvim-tree/nvim-tree.lua"] = {
     event = "VimEnter",
     override_options = overrides.nvimtree,
