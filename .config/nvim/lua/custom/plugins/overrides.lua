@@ -2,6 +2,8 @@ local M = {}
 
 M.blankline = {
   show_current_context = false,
+  show_first_indent_level = true,
+
   filetype_exclude = {
     "help",
     "terminal",
