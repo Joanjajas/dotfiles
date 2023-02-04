@@ -49,8 +49,6 @@ alias fd='fd -ui'
 alias cat=bat
 alias du=dust
 alias gs='git status'
-alias startx='startx ~/.config/.xinitrc'
-alias nv=neovide
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
