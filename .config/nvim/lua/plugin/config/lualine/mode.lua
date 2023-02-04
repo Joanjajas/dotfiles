@@ -1,7 +1,7 @@
 local M = {}
 
 local colors = {
-  bg = "#aa202328",
+  bg = "#202328",
   fg = "#bbc2cf",
   yellow = "#ECBE7B",
   cyan = "#008080",

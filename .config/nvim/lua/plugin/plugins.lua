@@ -149,6 +149,17 @@ return {
     },
   },
 
+  -- colorizer
+  {
+    "norcalli/nvim-colorizer.lua",
+
+    event = "BufReadPre",
+
+    config = function()
+      require("plugin.config.colorizer")
+    end,
+  },
+
   -- autopairs
   {
     "windwp/nvim-autopairs",
