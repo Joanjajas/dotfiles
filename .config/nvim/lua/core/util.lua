@@ -29,7 +29,7 @@ M.get_visible_buffers = function()
 end
 
 -- returns the current buffer formatter if there is any configured
-M.get_formatter = function()
+M.get_buffer_formatter = function()
   local filetype = vim.bo.filetype
   local null_ls = require("null-ls").get_sources()
 
@@ -57,7 +57,7 @@ end
 -- to have the formatter installed. In the case that there is no null-ls formatter
 -- setted up, the lsp client formatter will be used if the client supports formatting
 M.format_on_save = function()
-  local formatter = M.get_formatter()
+  local formatter = M.get_buffer_formatter()
 
   if formatter == nil then
     return

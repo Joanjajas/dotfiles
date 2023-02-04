@@ -66,7 +66,7 @@ M.lsp_clients = {
 
 M.formatter = {
   function()
-    local formatter = require("core.util").get_formatter()
+    local formatter = require("core.util").get_buffer_formatter()
     local clients = vim.lsp.get_active_clients({
       bufnr = vim.api.nvim_get_current_buf(),
     })
