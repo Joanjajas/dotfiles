@@ -57,12 +57,16 @@ M.lsp_progress = {
 
     return content or ""
   end,
-
-  color = { fg = color.cyan },
 }
 
 M.lsp_clients = {
   function()
+    local lsp_progress = M.lsp_progress[1]()
+
+    if lsp_progress ~= "" then
+      return string.format("[LS]  %s", lsp_progress)
+    end
+
     local clients = vim.lsp.get_active_clients({
       bufnr = vim.api.nvim_get_current_buf(),
     })

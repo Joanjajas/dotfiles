@@ -31,7 +31,6 @@ local config = {
     lualine_x = {
       component.lsp_clients,
       component.formatter,
-      component.lsp_progress,
       component.diagnostics,
       "%=",
       "location",
