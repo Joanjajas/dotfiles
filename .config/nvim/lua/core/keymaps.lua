@@ -1,3 +1,5 @@
+-- TODO: remake keymaps
+
 local map = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 

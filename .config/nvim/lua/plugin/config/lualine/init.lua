@@ -9,6 +9,7 @@ local component = require("plugin.config.lualine.component")
 
 local config = {
   options = {
+    globalstatus = true,
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
 
@@ -22,14 +23,21 @@ local config = {
     lualine_b = {},
     lualine_c = {
       component.mode,
-      "location",
-      "%=",
-      component.lsp_progress,
+      "filename",
+      component.branch,
+      "diff",
     },
 
     lualine_x = {
       component.lsp_clients,
       component.formatter,
+      component.lsp_progress,
+      component.diagnostics,
+      "%=",
+      "location",
+      "filetype",
+      component.encoding,
+      component.fileformat,
     },
 
     lualine_y = {},

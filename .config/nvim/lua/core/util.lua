@@ -28,7 +28,7 @@ M.get_visible_buffers = function()
   return vim.tbl_keys(buffers)
 end
 
--- returns the current buffer formatter if there is any configured
+-- returns the current buffer formatter if there is any configured and active
 M.get_buffer_formatter = function()
   local filetype = vim.bo.filetype
   local null_ls = require("null-ls").get_sources()

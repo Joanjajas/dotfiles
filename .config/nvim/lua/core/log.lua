@@ -10,13 +10,7 @@ local levels = {
 
 for _, v in ipairs(levels) do
   log[v.name] = function(...)
-    if type(vim.notify) == "table" then
-      -- for notify.nvim
-      vim.notify(..., v.level, { title = "Config" })
-    else
-      local console_string = string.format("[Config]: %s", ...)
-      vim.notify(console_string, v.level)
-    end
+    vim.notify(..., v.level, { title = "Config" })
   end
 end
 
