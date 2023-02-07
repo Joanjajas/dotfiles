@@ -1,4 +1,3 @@
--- require core configs
 require("core")
 require("core.options")
 require("core.keymaps")
@@ -13,5 +12,4 @@ end
 -- add lazy.nvim to runtime path
 vim.opt.rtp:prepend(lazypath)
 
--- require plugins
 require("plugin")

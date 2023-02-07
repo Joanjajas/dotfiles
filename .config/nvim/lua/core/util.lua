@@ -31,21 +31,21 @@ end
 -- returns the current buffer formatter if there is any configured and active
 M.get_buffer_formatter = function()
   local filetype = vim.bo.filetype
-  local null_ls = require("null-ls").get_sources()
+  local null_ls_sources = require("null-ls").get_sources()
 
   -- check if there is any null-ls formatter available
-  for i, source in ipairs(null_ls) do
+  for _, source in ipairs(null_ls_sources) do
     if source.filetypes[filetype] then
-      return null_ls[i]
+      return source
     end
   end
 
   -- if there is no null-ls formatter check if any of the lsp clients supports formatting
-  local clients = vim.lsp.get_active_clients({
+  local lsp_clients = vim.lsp.get_active_clients({
     bufnr = vim.api.nvim_get_current_buf(),
   })
 
-  for _, client in ipairs(clients) do
+  for _, client in ipairs(lsp_clients) do
     if client.supports_method("textDocument/formatting") then
       return client
     end

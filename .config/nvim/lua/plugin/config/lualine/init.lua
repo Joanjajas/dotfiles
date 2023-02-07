@@ -23,8 +23,8 @@ local config = {
     lualine_b = {},
     lualine_c = {
       component.mode,
-      "filename",
       component.branch,
+      "filename",
       "diff",
     },
 
