@@ -5,6 +5,7 @@ if not notify_present then
   return log.warn("Module 'notify' is not installed or could not be loaded")
 end
 
+-- set notify as the default nvim notification provider
 vim.notify = notify
 
 local config = {

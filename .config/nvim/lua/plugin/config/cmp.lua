@@ -8,7 +8,7 @@ if not cmp_present then
 end
 
 if not luasnip_present then
-  return log.warn("Module 'cmp' is not installed or could not be loaded")
+  return log.warn("Module 'luasnip' is not installed or could not be loaded")
 end
 
 if not autopairs_present then
