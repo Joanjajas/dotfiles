@@ -123,6 +123,7 @@ return {
     },
   },
 
+  -- smart comments
   {
     "numToStr/Comment.nvim",
 

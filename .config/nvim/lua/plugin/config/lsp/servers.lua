@@ -9,7 +9,7 @@ local handlers = require("plugin.config.lsp.util").handlers
 local capabilities = require("plugin.config.lsp.util").capabilities
 
 -- default setup for lua language server
-lspconfig.sumneko_lua.setup({
+lspconfig.lua_ls.setup({
   handlers = handlers,
   capabilities = capabilities,
 
