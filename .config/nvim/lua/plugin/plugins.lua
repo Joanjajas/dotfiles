@@ -48,17 +48,6 @@ return {
     end,
   },
 
-  -- show keymaps
-  {
-    "folke/which-key.nvim",
-
-    event = "VimEnter",
-
-    config = function()
-      require("plugin.config.which-key")
-    end,
-  },
-
   -- indent guides
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -227,18 +216,5 @@ return {
     config = function()
       require("plugin.config.mason")
     end,
-  },
-
-  -- debugger
-  {
-    "mfussenegger/nvim-dap",
-
-    config = function()
-      require("plugin.config.dap")
-    end,
-
-    dependencies = {
-      "rcarriga/nvim-dap-ui",
-    },
   },
 }
