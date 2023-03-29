@@ -29,7 +29,7 @@ map("n", ",,", "A,<Esc>", default_opts)
 map("i", ",,", "<Esc>A,", default_opts)
 
 -- toggle neotree
-map("n", "<C-n>", ":NvimTreeToggle<CR>, default_opts")
+map("n", "<C-n>", ":NvimTreeToggle<CR>", default_opts)
 
 -- stop search highlighting
 map("n", "<Esc>", ":noh<CR>", default_opts)
@@ -114,5 +114,5 @@ map("n", "<leader>tb", ":lua require('dap').toggle_breakpoint()<CR>", default_op
 map("n", "<leader>ui", ":lua require('dap').continue()<CR>", default_opts)
 
 -- comments
-map("n", "<leader>/", ":lua require('comment.api').toggle.linewise.current()<CR>", default_opts)
-map("v", "<leader>/", ":lua require('comment.api').toggle.linewise(vim.fn.visualmode())<CR>", default_opts)
+map("n", "<leader>/", ":lua require('Comment.api').toggle.linewise.current()<CR>", default_opts)
+map("v", "<leader>/", ":lua require('Comment.api').toggle.linewise(vim.fn.visualmode())<CR>", default_opts)

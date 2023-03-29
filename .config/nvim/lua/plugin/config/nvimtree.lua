@@ -32,13 +32,11 @@ local config = {
     width = {
       max = 40,
     },
-
-    mappings = {
-      list = {
-        { key = { "<BS>" }, cb = ":q!<CR>" },
-      },
-    },
   },
+
+  on_attach = function(bufnr)
+    vim.keymap.set("n", "<BS>", ":q!<CR>", { buffer = bufnr })
+  end,
 }
 
 nvimtree.setup(config)
