@@ -5,6 +5,8 @@ if not nvimtree_present then
   return log.warn("Module 'nvim-tree' is not installed or could not be loaded")
 end
 
+local api = require("nvim-tree.api")
+
 local config = {
   disable_netrw = true,
   hijack_cursor = true,
@@ -35,6 +37,7 @@ local config = {
   },
 
   on_attach = function(bufnr)
+    api.config.mappings.default_on_attach(bufnr)
     vim.keymap.set("n", "<BS>", ":q!<CR>", { buffer = bufnr })
   end,
 }
