@@ -94,6 +94,7 @@ return {
     dependencies = {
       "folke/neodev.nvim",
       "ray-x/lsp_signature.nvim",
+      "glepnir/lspsaga.nvim",
     },
   },
 

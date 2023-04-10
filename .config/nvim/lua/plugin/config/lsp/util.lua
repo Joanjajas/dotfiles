@@ -1,13 +1,8 @@
 local cmp_nvim_lsp_present, cmp_capabilities = pcall(require, "cmp_nvim_lsp")
-local neodev_present, neodev = pcall(require, "neodev")
 local log = require("core.log")
 
 if not cmp_nvim_lsp_present then
   return log.warn("Module 'cmp_nvim_lsp' is not installed or could not be loaded")
-end
-
-if not neodev_present then
-  return log.warn("Module 'neodev' is not installed or could not be loaded")
 end
 
 local M = {}
@@ -20,10 +15,6 @@ M.set_icons = function()
     local hl = "DiagnosticSign" .. type
     vim.fn.sign_define(hl, { text = icon, texthl = hl })
   end
-end
-
-M.set_neodev = function()
-  neodev.setup()
 end
 
 -- make lsp floating window corners rounded
