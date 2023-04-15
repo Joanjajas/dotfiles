@@ -79,6 +79,8 @@ M.lsp_clients = {
 
     return "[LS]  Inactive"
   end,
+
+  color = { fg = color.yellow },
 }
 
 M.formatter = {
@@ -101,6 +103,8 @@ M.formatter = {
 
     return string.format("[Formatter]  %s", formatter.name)
   end,
+
+  color = { fg = color.yellow },
 }
 
 M.branch = {

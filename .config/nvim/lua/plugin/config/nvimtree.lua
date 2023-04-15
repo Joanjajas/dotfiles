@@ -25,10 +25,13 @@ local config = {
     show_on_open_dirs = false,
   },
 
+  renderer = {
+    root_folder_label = false,
+  },
+
   view = {
     adaptive_size = true,
     cursorline = false,
-    hide_root_folder = true,
     side = "right",
 
     width = {

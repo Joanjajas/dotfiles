@@ -7,6 +7,20 @@ end
 
 local config = {
   style = "night",
+
+  on_colors = function(colors)
+    colors.bg = "#0e131f"
+    colors.bg_float = colors.bg
+    colors.bg_sidebar = colors.bg
+    colors.bg_statusline = colors.bg
+    colors.border = colors.bg
+  end,
+
+  on_highlights = function(highlight, colors)
+    highlight.TabLineFill = {
+      bg = colors.bg,
+    }
+  end,
 }
 
 tokyonight.setup(config)

@@ -5,6 +5,10 @@ if not lspsaga_present then
   return log.warn("Module 'lspsaga' is not installed or could not be loaded")
 end
 
-local config = {}
+local config = {
+  lightbulb = {
+    enable = false,
+  },
+}
 
 lspsaga.setup(config)
