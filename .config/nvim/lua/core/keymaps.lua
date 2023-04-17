@@ -64,8 +64,6 @@ map("n", "<leader>tc", ":TodoTelescope<CR>", default_opts)
 map("n", "<leader>rn", ":Lspsaga rename<CR>", default_opts)
 map("n", "gd", ":Lspsaga goto_definition<CR>", default_opts)
 map("n", "gr", ":Lspsaga lsp_finder<CR>", default_opts)
-map("n", "gn", ":Lspsaga diagnostic_jump_next<CR>", default_opts)
-map("n", "gN", ":Lspsaga diagnostic_jump_prev<CR>", default_opts)
 
 map("n", "K", function()
   vim.lsp.buf.hover()
@@ -73,6 +71,14 @@ end, default_opts)
 
 map("n", "m", function()
   vim.diagnostic.open_float()
+end, default_opts)
+
+map("n", "gn", function()
+  vim.diagnostic.goto_next()
+end, default_opts)
+
+map("n", "gN", function()
+  vim.diagnostic.goto_prev()
 end, default_opts)
 
 -- gitsigns

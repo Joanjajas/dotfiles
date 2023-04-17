@@ -2,6 +2,7 @@
 vim.diagnostic.config({
   virtual_text = false,
   underline = false,
+  float = { border = "rounded" },
 })
 
 -- diagnostics icons
