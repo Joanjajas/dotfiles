@@ -1,3 +1,5 @@
+-- TODO: Make keymaps between plugins consistent
+
 local map = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
@@ -7,6 +9,7 @@ map("n", "<leader>s", ":update<CR>", default_opts)
 -- exit insert mode
 map("i", "kj", "<Esc>", default_opts)
 map("t", "kj", "<C-\\><C-n>", default_opts)
+map("c", "kj", "<Esc>", default_opts)
 
 -- close current window
 map("n", "<BS>", ":silent! q!<CR>", default_opts)

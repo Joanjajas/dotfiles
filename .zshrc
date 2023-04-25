@@ -51,6 +51,7 @@ alias du=dust
 alias gs='git status'
 alias clear='printf "\33c\e[3J"'
 alias python='python3'
+alias pip='python -m pip'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
