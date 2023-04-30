@@ -11,6 +11,7 @@ local builtin = null_ls.builtins
 local config = {
   sources = {
     builtin.formatting.stylua,
+    builtin.formatting.autopep8,
   },
 }
 
