@@ -20,6 +20,10 @@ lspconfig.lua_ls.setup({
       },
     },
   },
+
+  on_attach = function(client, bufnr)
+    client.server_capabilities.semanticTokensProvider = nil
+  end,
 })
 
 -- user installed servers
@@ -29,5 +33,9 @@ for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup({
     handlers = handlers,
     capabilities = capabilities,
+
+    on_attach = function(client, bufnr)
+      client.server_capabilities.semanticTokensProvider = nil
+    end,
   })
 end
