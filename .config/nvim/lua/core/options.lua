@@ -13,8 +13,8 @@ opt.scrolloff = 5
 opt.expandtab = true
 opt.splitright = true
 opt.splitbelow = true
-opt.shiftwidth = 2
-opt.tabstop = 2
+opt.shiftwidth = 4
+opt.tabstop = 4
 opt.mouse = "a"
 
 -- go to next/previous line when cursor reaches end/beginning of line

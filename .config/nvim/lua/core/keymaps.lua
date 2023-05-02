@@ -12,6 +12,9 @@ map("c", "kj", "<Esc>", default_opts)
 -- close current window
 map("n", "<BS>", ":silent! q!<CR>", default_opts)
 
+-- open terminal in new tab
+map("n", "<leader>tm", ":tabe | term<CR>i", default_opts)
+
 -- don't copy the replaced text after pasting in visual mode
 map("v", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', default_opts)
 
@@ -24,8 +27,8 @@ map("n", ";;", "A;<Esc>", default_opts)
 map("i", ";;", "<Esc>A;", default_opts)
 
 -- insert endline colon
-map("n", "::", "A:<Esc>", default_opts)
-map("i", "::", "<Esc>A:", default_opts)
+map("n", "..", "A:<Esc>", default_opts)
+map("i", "..", "<Esc>A:", default_opts)
 
 -- insert endline comma
 map("n", ",,", "A,<Esc>", default_opts)
