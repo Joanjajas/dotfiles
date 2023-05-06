@@ -20,6 +20,10 @@ local config = {
     highlight.TabLineFill = {
       bg = colors.bg,
     }
+
+    highlight.TabLineSel = {
+      bg = colors.bg,
+    }
   end,
 }
 
