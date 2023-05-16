@@ -7,6 +7,7 @@ end
 
 local config = {
   style = "night",
+  transparent = true,
 
   on_colors = function(colors)
     colors.bg = "#0e131f"

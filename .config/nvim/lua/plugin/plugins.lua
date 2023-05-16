@@ -95,6 +95,7 @@ return {
       "folke/neodev.nvim",
       "ray-x/lsp_signature.nvim",
       "nvimdev/lspsaga.nvim",
+      "github/copilot.vim",
     },
   },
 

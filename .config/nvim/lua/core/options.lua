@@ -4,6 +4,7 @@ local opt = vim.opt
 
 -- global variables
 g.mapleader = " "
+g.copilot_assume_mapped = true
 
 -- global options
 opt.rnu = true
