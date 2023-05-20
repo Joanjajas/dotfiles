@@ -52,6 +52,7 @@ alias gs='git status'
 alias clear='printf "\33c\e[3J"'
 alias python='python3'
 alias pip='python -m pip'
+alias matlab='/Applications/MATLAB_R2023a.app/bin/matlab -nodesktop -nosplash'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh

@@ -107,9 +107,27 @@ M.formatter = {
   color = { fg = color.yellow },
 }
 
+M.copilot = {
+  function()
+    local clients = vim.lsp.get_active_clients({
+      bufnr = vim.api.nvim_get_current_buf(),
+    })
+
+    for _, client in ipairs(clients) do
+      if client.name == "copilot" then
+        return "Copilot "
+      end
+    end
+
+    return "Copilot "
+  end,
+
+  color = { fg = color.yellow },
+}
+
 M.branch = {
   "branch",
-  icon = " ",
+  icon = "",
   color = { fg = color.magenta },
 }
 

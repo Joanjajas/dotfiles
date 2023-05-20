@@ -9,21 +9,30 @@ local config = {
   style = "night",
   transparent = true,
 
+  styles = {
+    sidebars = "transparent",
+    floats = "transparent",
+  },
+
   on_colors = function(colors)
-    colors.bg = "#0e131f"
-    colors.bg_float = colors.bg
-    colors.bg_sidebar = colors.bg
-    colors.bg_statusline = colors.bg
-    colors.border = colors.bg
+    colors.bg_statusline = "none"
   end,
 
   on_highlights = function(highlight, colors)
+    highlight.WinSeparator = {
+      fg = "#0e131f",
+    }
+
+    highlight.TabLine = {
+      bg = "none",
+    }
+
     highlight.TabLineFill = {
-      bg = colors.bg,
+      bg = "none",
     }
 
     highlight.TabLineSel = {
-      bg = colors.bg,
+      bg = "none",
     }
   end,
 }

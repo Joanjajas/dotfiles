@@ -33,6 +33,8 @@ local config = {
       component.formatter,
       component.diagnostics,
       "%=",
+      component.copilot,
+      "%=",
       "location",
       "filetype",
       component.encoding,

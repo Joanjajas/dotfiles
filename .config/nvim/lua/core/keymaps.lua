@@ -1,6 +1,8 @@
 local map = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
+vim.api.nvim_set_keymap("i", "<C-n>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+
 -- save current buffer
 map("n", "<leader>s", ":update<CR>", default_opts)
 

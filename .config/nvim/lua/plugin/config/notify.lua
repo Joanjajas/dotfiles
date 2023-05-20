@@ -11,6 +11,7 @@ vim.notify = notify
 local config = {
   timeout = 4000,
   top_down = false,
+  background_colour = "#000000",
 }
 
 notify.setup(config)
