@@ -1,8 +1,6 @@
 local map = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
-vim.api.nvim_set_keymap("i", "<C-n>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-
 -- save current buffer
 map("n", "<leader>s", ":update<CR>", default_opts)
 
@@ -59,6 +57,9 @@ map("n", "<C-h>", "<C-w>h", default_opts)
 map("n", "<C-j>", "<C-w>j", default_opts)
 map("n", "<C-k>", "<C-w>k", default_opts)
 map("n", "<C-l>", "<C-w>l", default_opts)
+
+-- github copilot
+vim.api.nvim_set_keymap("i", "<C-n>", 'copilot#Accept("<CR>")', { expr = true, silent = true })
 
 -- telescope
 map("n", "<leader>fa", ":Telescope find_files no_ignore=true hidden=true<CR>", default_opts)

@@ -72,7 +72,7 @@ M.lsp_clients = {
     })
 
     for _, client in ipairs(clients) do
-      if client.name ~= "null-ls" then
+      if client.name ~= "null-ls" and client.name ~= "copilot" then
         return string.format("[LS]  %s", client.name)
       end
     end
