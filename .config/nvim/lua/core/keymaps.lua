@@ -13,7 +13,7 @@ map("c", "kj", "<Esc>", default_opts)
 map("n", "<BS>", ":silent! q!<CR>", default_opts)
 
 -- open terminal in new tab
-map("n", "<leader>tm", ":tabe | setlocal norelativenumber | term<CR>i", default_opts)
+map("n", "<leader>tm", ":tabe | setlocal norelativenumber | term<CR>", default_opts)
 
 -- don't copy the replaced text after pasting in visual mode
 map("v", "p", 'p:let @+=@0<CR>:let @"=@0<CR>', default_opts)
