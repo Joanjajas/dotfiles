@@ -26,6 +26,13 @@ lspconfig.lua_ls.setup({
   end,
 })
 
+lspconfig.verible.setup({
+  handlers = handlers,
+  capabilities = capabilities,
+
+  cmd = { "verible-verilog-ls" },
+})
+
 -- user installed servers
 local servers = { "rust_analyzer", "pyright" }
 

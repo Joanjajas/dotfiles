@@ -6,12 +6,16 @@ if not lualine_present then
 end
 
 local component = require("plugin.config.lualine.component")
+local theme = require("lualine.themes.auto")
+theme.normal.c.bg = "none"
+theme.inactive.c.bg = "none"
 
 local config = {
   options = {
     globalstatus = true,
     component_separators = { left = "", right = "" },
     section_separators = { left = "", right = "" },
+    theme = theme,
 
     refresh = {
       statusline = 150,

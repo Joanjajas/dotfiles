@@ -18,7 +18,17 @@ return {
     lazy = false,
 
     config = function()
-      require("plugin.config.tokyonight")
+      require("plugin.config.colorscheme.tokyonight")
+    end,
+  },
+
+  {
+    "ellisonleao/gruvbox.nvim",
+
+    lazy = false,
+
+    config = function()
+      require("plugin.config.colorscheme.gruvbox")
     end,
   },
 

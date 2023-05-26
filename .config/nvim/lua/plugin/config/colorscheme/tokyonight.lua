@@ -14,15 +14,7 @@ local config = {
     floats = "transparent",
   },
 
-  on_colors = function(colors)
-    colors.bg_statusline = "none"
-  end,
-
   on_highlights = function(highlight, colors)
-    highlight.WinSeparator = {
-      fg = "#0e131f",
-    }
-
     highlight.TabLine = {
       bg = "none",
     }
