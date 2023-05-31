@@ -63,10 +63,6 @@ M.format_on_save = function()
     return
   end
 
-  if formatter.name == "verible" then
-    return
-  end
-
   vim.lsp.buf.format({
     filter = function(client)
       -- if the formatter name and client name are not the same it means that
