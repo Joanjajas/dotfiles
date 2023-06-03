@@ -17,6 +17,9 @@ opt.splitright = true
 opt.splitbelow = true
 opt.shiftwidth = 2
 opt.tabstop = 2
+opt.smartcase = true
+opt.smartindent = true
+opt.smarttab = true
 opt.mouse = "a"
 opt.fillchars = { vert = " ", horiz = " ", fold = " ", eob = " ", diff = " " }
 
