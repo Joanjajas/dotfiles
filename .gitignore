@@ -1,4 +1,6 @@
 /*
 
 !.gitignore
+!install.sh
+!.xinitrc
 !README.md
