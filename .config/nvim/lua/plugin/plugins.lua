@@ -177,7 +177,10 @@ return {
   {
     "hrsh7th/nvim-cmp",
 
-    event = "InsertEnter",
+    event = {
+      "InsertEnter",
+      "CmdlineEnter",
+    },
 
     config = function()
       require("plugin.config.cmp")

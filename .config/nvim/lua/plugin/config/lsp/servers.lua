@@ -27,7 +27,7 @@ lspconfig.lua_ls.setup({
 })
 
 -- user installed servers
-local servers = { "rust_analyzer", "pyright" }
+local servers = { "rust_analyzer", "pyright", "matlab_ls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup({

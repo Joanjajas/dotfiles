@@ -18,6 +18,7 @@ opt.splitbelow = true
 opt.shiftwidth = 4
 opt.tabstop = 4
 opt.smartcase = true
+opt.ignorecase = true
 opt.smartindent = true
 opt.smarttab = true
 opt.mouse = "a"

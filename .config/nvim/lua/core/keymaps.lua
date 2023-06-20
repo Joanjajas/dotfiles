@@ -1,6 +1,8 @@
 local map = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
+map("n", "<leader>r", ":%s/\\<\\>//gc<left><left><left><left><left><left>", default_opts)
+
 -- save current buffer
 map("n", "<leader>s", ":update<CR>", default_opts)
 
