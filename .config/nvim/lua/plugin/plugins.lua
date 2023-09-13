@@ -173,6 +173,16 @@ return {
     end,
   },
 
+  {
+    "windwp/nvim-ts-autotag",
+
+    event = "InsertEnter",
+
+    config = function()
+      require("plugin.config.autotag")
+    end,
+  },
+
   -- atuocompletion
   {
     "hrsh7th/nvim-cmp",
@@ -194,10 +204,24 @@ return {
       "onsails/lspkind.nvim",
 
       -- cmp sources
+      "saadparwaiz1/cmp_luasnip",
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-cmdline",
       "hrsh7th/cmp-buffer",
       "hrsh7th/cmp-path",
+    },
+  },
+
+  -- snippet engine
+  {
+    "L3MON4D3/LuaSnip",
+
+    config = function()
+      require("plugin.config.luasnip")
+    end,
+
+    dependencies = {
+      "rafamadriz/friendly-snippets",
     },
   },
 
