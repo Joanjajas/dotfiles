@@ -12,6 +12,7 @@ local config = {
   sources = {
     builtin.formatting.stylua,
     builtin.formatting.autopep8,
+    builtin.formatting.prettier,
   },
 }
 
