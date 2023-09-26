@@ -68,6 +68,7 @@ map("n", "<leader>fa", ":Telescope find_files no_ignore=true hidden=true<CR>", d
 map("n", "<leader>ff", ":Telescope find_files<CR>", default_opts)
 map("n", "<leader>fr", ":Telescope oldfiles<CR>", default_opts)
 map("n", "<leader>fg", ":Telescope live_grep<CR>", default_opts)
+map("n", "<leader>fd", ":Telescope diagnostics<CR>", default_opts)
 map("n", "<leader>th", ":Telescope colorscheme<CR>", default_opts)
 map("n", "<leader>gs", ":Telescope git_status<CR>", default_opts)
 map("n", "<leader>gc", ":Telescope git_commits<CR>", default_opts)

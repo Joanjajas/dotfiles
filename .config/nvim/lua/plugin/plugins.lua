@@ -13,12 +13,12 @@ return {
 
   -- colorscheme
   {
-    "folke/tokyonight.nvim",
+    "navarasu/onedark.nvim",
 
     lazy = false,
 
     config = function()
-      require("plugin.config.colorscheme.tokyonight")
+      require("plugin.config.colorscheme.onedark")
     end,
   },
 
