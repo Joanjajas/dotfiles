@@ -8,7 +8,7 @@ end
 -- null-ls builtin linters and formatters
 local builtin = null_ls.builtins
 
-local config = {
+local null_ls_config = {
   sources = {
     builtin.formatting.stylua,
     builtin.formatting.autopep8,
@@ -16,4 +16,4 @@ local config = {
   },
 }
 
-null_ls.setup(config)
+null_ls.setup(null_ls_config)
