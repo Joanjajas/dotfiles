@@ -9,6 +9,10 @@ local config = {
   buftype_exclude = { "terminal" },
   show_trailing_blankline_indent = false,
 
+  scope = {
+    enabled = false,
+  },
+
   filetype_exclude = {
     "help",
     "terminal",
