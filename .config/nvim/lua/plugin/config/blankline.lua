@@ -1,4 +1,4 @@
-local blankline_present, blankline = pcall(require, "indent_blankline")
+local blankline_present, blankline = pcall(require, "ibl")
 local log = require("core.log")
 
 if not blankline_present then

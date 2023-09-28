@@ -174,16 +174,6 @@ return {
     end,
   },
 
-  {
-    "windwp/nvim-ts-autotag",
-
-    event = "InsertEnter",
-
-    config = function()
-      require("plugin.config.autotag")
-    end,
-  },
-
   -- atuocompletion
   {
     "hrsh7th/nvim-cmp",
