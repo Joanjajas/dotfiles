@@ -1,9 +1,4 @@
-local blankline_present, blankline = pcall(require, "ibl")
-local log = require("core.log")
-
-if not blankline_present then
-  return log.warn("Module 'indent_blankline' is not installed or could not be loaded")
-end
+local blankline = require("ibl")
 
 local config = {
   buftype_exclude = { "terminal" },

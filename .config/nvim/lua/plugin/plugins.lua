@@ -1,16 +1,4 @@
 return {
-  -- notification manager
-  {
-    "rcarriga/nvim-notify",
-
-    lazy = false,
-    priority = 1000,
-
-    config = function()
-      require("plugin.config.notify")
-    end,
-  },
-
   -- colorscheme
   {
     "navarasu/onedark.nvim",

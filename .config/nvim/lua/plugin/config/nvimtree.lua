@@ -1,10 +1,4 @@
-local nvimtree_present, nvimtree = pcall(require, "nvim-tree")
-local log = require("core.log")
-
-if not nvimtree_present then
-  return log.warn("Module 'nvim-tree' is not installed or could not be loaded")
-end
-
+local nvimtree = require("nvim-tree")
 local api = require("nvim-tree.api")
 
 local config = {

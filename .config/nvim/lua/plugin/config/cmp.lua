@@ -1,19 +1,6 @@
-local cmp_present, cmp = pcall(require, "cmp")
-local luasnip_present, luasnip = pcall(require, "luasnip")
-local autopairs_present, autopairs = pcall(require, "nvim-autopairs.completion.cmp")
-local log = require("core.log")
-
-if not cmp_present then
-  return log.warn("Module 'cmp' is not installed or could not be loaded")
-end
-
-if not luasnip_present then
-  return log.warn("Module 'luasnip' is not installed or could not be loaded")
-end
-
-if not autopairs_present then
-  return log.warn("Module 'nvim-autopairs' is not installed or could not be loaded")
-end
+local cmp = require("cmp")
+local luasnip = require("luasnip")
+local autopairs = require("nvim-autopairs.completion.cmp")
 
 local config = {
   preselect = false,
@@ -50,10 +37,9 @@ local config = {
     ["<CR>"] = cmp.mapping.confirm(),
 
     ["<Tab>"] = cmp.mapping(function(fallback)
-      local copilot_keys = vim.fn["copilot#Accept"]()
       if cmp.visible() then
         cmp.select_next_item()
-      elseif luasnip.expand_or_jumpable() then
+      elseif luasnip.expand_or_jump() then
         luasnip.expand_or_jump()
       else
         fallback()

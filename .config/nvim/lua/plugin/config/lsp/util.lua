@@ -1,9 +1,4 @@
-local cmp_nvim_lsp_present, cmp_capabilities = pcall(require, "cmp_nvim_lsp")
-local log = require("core.log")
-
-if not cmp_nvim_lsp_present then
-  return log.warn("Module 'cmp_nvim_lsp' is not installed or could not be loaded")
-end
+local cmp_capabilities = require("cmp_nvim_lsp")
 
 local M = {}
 

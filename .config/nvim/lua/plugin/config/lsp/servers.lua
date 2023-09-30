@@ -1,9 +1,4 @@
-local lspconfig_present, lspconfig = pcall(require, "lspconfig")
-local log = require("core.log")
-
-if not lspconfig_present then
-  return log.warn("Module 'lspconfig' is not installed or could not be loaded")
-end
+local lspconfig = require("lspconfig")
 
 local handlers = require("plugin.config.lsp.util").handlers
 local capabilities = require("plugin.config.lsp.util").capabilities
@@ -27,7 +22,7 @@ lspconfig.lua_ls.setup({
 })
 
 -- user installed servers
-local servers = { "rust_analyzer", "pyright", "matlab_ls", "tsserver", "tailwindcss" }
+local servers = { "rust_analyzer", "pyright", "matlab_ls" }
 
 for _, lsp in ipairs(servers) do
   lspconfig[lsp].setup({

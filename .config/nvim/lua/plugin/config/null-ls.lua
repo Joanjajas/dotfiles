@@ -1,9 +1,4 @@
-local null_ls_present, null_ls = pcall(require, "null-ls")
-local log = require("core.log")
-
-if not null_ls_present then
-  return log.warn("Module 'null-ls' is not installed or could not be loaded")
-end
+local null_ls = require("null-ls")
 
 -- null-ls builtin linters and formatters
 local builtin = null_ls.builtins

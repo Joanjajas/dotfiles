@@ -1,9 +1,4 @@
-local telescope_present, telescope = pcall(require, "telescope")
-local log = require("core.log")
-
-if not telescope_present then
-  return log.warn("Module 'telescope' is not installed or could not be loaded")
-end
+local telescope = require("telescope")
 
 local config = {
   pickers = {

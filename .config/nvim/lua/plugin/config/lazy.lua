@@ -3,10 +3,6 @@ return {
     lazy = true,
   },
 
-  install = {
-    colorscheme = { "onedark" },
-  },
-
   performance = {
     rtp = {
       disabled_plugins = {

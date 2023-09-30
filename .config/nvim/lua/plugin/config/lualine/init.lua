@@ -1,9 +1,4 @@
-local lualine_present, lualine = pcall(require, "lualine")
-local log = require("core.log")
-
-if not lualine_present then
-  return log.warn("Module lualine is not installed or could not be loaded")
-end
+local lualine = require("lualine")
 
 local component = require("plugin.config.lualine.component")
 local theme = require("lualine.themes.auto")
