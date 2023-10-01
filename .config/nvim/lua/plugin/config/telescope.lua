@@ -22,3 +22,4 @@ local config = {
 }
 
 telescope.setup(config)
+telescope.load_extension("fzf")
