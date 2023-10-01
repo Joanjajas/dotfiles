@@ -1,30 +1,23 @@
-local mason_lspconfig = require("mason-lspconfig")
-local mason_null_ls = require("mason-null-ls")
 local mason = require("mason")
 
 local mason_config = {
   PATH = "skip",
 }
 
-local mason_lsp_config = {
-  ensure_installed = {
-    "pyright",
-    "lua_ls",
-    "rust_analyzer",
-  },
+local ensure_installed = {
+  -- lsp servers
+  "lua-language-server",
+  "rust-analyzer",
+  "pyright",
 
-  automatic_installation = true,
+  -- formatters
+  "stylua",
+  "autopep8",
 }
 
-local mason_null_ls_config = {
-  ensure_isntalled = {
-    "autopep8",
-    "stylua",
-  },
-
-  automatic_installation = true,
-}
+-- custom nvchad cmd to install all mason binaries listed
+vim.api.nvim_create_user_command("MasonInstallAll", function()
+  vim.cmd("MasonInstall " .. table.concat(ensure_installed, " "))
+end, {})
 
 mason.setup(mason_config)
-mason_null_ls.setup(mason_null_ls_config)
-mason_lspconfig.setup(mason_lsp_config)

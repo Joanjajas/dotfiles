@@ -109,7 +109,6 @@ return {
 
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "jay-babu/mason-null-ls.nvim",
     },
   },
 
@@ -225,6 +224,7 @@ return {
 
     cmd = {
       "MasonInstall",
+      "MasonInstallAll",
       "MasonUninstall",
       "MasonUninstallAll",
       "MasonLog",
@@ -234,9 +234,5 @@ return {
     config = function()
       require("plugin.config.mason")
     end,
-
-    dependencies = {
-      "williamboman/mason-lspconfig.nvim",
-    },
   },
 }
