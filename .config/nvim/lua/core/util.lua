@@ -2,7 +2,7 @@ local M = {}
 
 -- bootstrap lazy.nvim
 M.bootstrap_lazy = function(lazypath)
-  print("Installing package manager...")
+  print("Installing package manager ...")
 
   vim.fn.system({
     "git",

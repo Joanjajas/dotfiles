@@ -1,15 +1,4 @@
 return {
-  -- colorscheme
-  {
-    "navarasu/onedark.nvim",
-
-    lazy = false,
-
-    config = function()
-      require("plugin.config.colorscheme.onedark")
-    end,
-  },
-
   {
     "ellisonleao/gruvbox.nvim",
 
@@ -71,6 +60,12 @@ return {
   -- improved syntax highlighting
   {
     "nvim-treesitter/nvim-treesitter",
+
+    cmd = {
+      "TSInstall",
+      "TSUninstall",
+      "TSUpdate",
+    },
 
     event = "BufReadPre",
 
