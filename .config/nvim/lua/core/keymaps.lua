@@ -1,6 +1,7 @@
 local map = vim.keymap.set
 local default_opts = { noremap = true, silent = true }
 
+-- search and replace
 map("n", "<leader>r", ":%s/\\<\\>//gc<left><left><left><left><left><left>", default_opts)
 
 -- save current buffer
@@ -71,9 +72,17 @@ map("n", "<leader>gc", ":Telescope git_commits<CR>", default_opts)
 map("n", "<leader>tc", ":TodoTelescope<CR>", default_opts)
 
 -- lsp
-map("n", "<leader>rn", ":Lspsaga rename<CR>", default_opts)
-map("n", "gd", ":Lspsaga goto_definition<CR>", default_opts)
-map("n", "gr", ":Lspsaga lsp_finder<CR>", default_opts)
+map("n", "gd", function()
+  vim.lsp.buf.definition()
+end, default_opts)
+
+map("n", "gd", function()
+  vim.lsp.buf.references()
+end, default_opts)
+
+map("n", "rn", function()
+  vim.lsp.buf.rename()
+end, default_opts)
 
 map("n", "K", function()
   vim.lsp.buf.hover()

@@ -15,20 +15,16 @@ opt.scrolloff = 5
 opt.expandtab = true
 opt.splitright = true
 opt.splitbelow = true
-opt.shiftwidth = 2
-opt.tabstop = 2
+opt.shiftwidth = 4
+opt.tabstop = 4
 opt.smartcase = true
 opt.ignorecase = true
 opt.smartindent = true
 opt.smarttab = true
 opt.mouse = "a"
+
+-- remove window borders
 opt.fillchars = { vert = " ", horiz = " ", fold = " ", eob = " ", diff = " " }
 
 -- go to next/previous line when cursor reaches end/beginning of line
 opt.whichwrap:append("hl")
-
-vim.opt.guifont = "CaskaydiaCove Nerd Font:h14"
-vim.g.neovide_cursor_trail_size = 0
-vim.g.neovide_cursor_antialiasing = false
-vim.g.neovide_cursor_animation_length = 0.13
-vim.g.neovide_cursor_trail_size = 0.05

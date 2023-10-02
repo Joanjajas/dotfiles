@@ -12,6 +12,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
   end,
 })
 
+-- start colorizer plugin on buffer enter
 vim.api.nvim_create_autocmd("BufEnter", {
   callback = function()
     require("colorizer").attach_to_buffer(0)

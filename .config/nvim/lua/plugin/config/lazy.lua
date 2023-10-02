@@ -3,6 +3,10 @@ return {
     lazy = true,
   },
 
+  install = {
+    colorscheme = "gruvbox",
+  },
+
   performance = {
     rtp = {
       disabled_plugins = {
