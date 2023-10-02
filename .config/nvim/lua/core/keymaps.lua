@@ -28,10 +28,6 @@ map("i", "{{", "<Esc>A {}<Left><CR><Esc>O", default_opts)
 map("n", ";;", "A;<Esc>", default_opts)
 map("i", ";;", "<Esc>A;", default_opts)
 
--- insert endline colon
-map("n", "..", "A:<Esc>", default_opts)
-map("i", "..", "<Esc>A:", default_opts)
-
 -- insert endline comma
 map("n", ",,", "A,<Esc>", default_opts)
 map("i", ",,", "<Esc>A,", default_opts)

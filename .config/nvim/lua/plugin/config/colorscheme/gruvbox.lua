@@ -17,9 +17,9 @@ local config = {
       bg = "none",
     },
 
-    TablineSel = {
-      bg = "none",
-    },
+    -- TablineSel = {
+    --   bg = "none",
+    -- },
   },
 }
 

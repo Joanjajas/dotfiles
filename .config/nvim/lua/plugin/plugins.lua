@@ -9,6 +9,12 @@ return {
     end,
   },
 
+  {
+    "RRethy/nvim-base16",
+
+    lazy = false,
+  },
+
   -- file explorer
   {
     "nvim-tree/nvim-tree.lua",
@@ -32,6 +38,17 @@ return {
 
     config = function()
       require("plugin.config.lualine")
+    end,
+  },
+
+  -- tabline
+  {
+    "alvarosevilla95/luatab.nvim",
+
+    event = "VimEnter",
+
+    config = function()
+      require("plugin.config.luatab")
     end,
   },
 
