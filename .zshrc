@@ -53,9 +53,8 @@ alias clear='printf "\33c\e[3J"'
 alias python='python3'
 alias pip='python -m pip'
 alias matlab='/Applications/MATLAB_R2023a.app/bin/matlab -nodesktop -nosplash'
-alias nv='neovide'
-alias f='~/scripts/fzf_open_file.sh'
-alias fp='~/scripts/fzf_open_dir.sh'
+alias f='~/scripts/fzf/open_file.sh'
+alias fp='. ~/scripts/fzf/open_dir.sh'
 alias ff='cd $(fd -t d . ~/ ~/Documents ~/Downloads | fzf)'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
