@@ -43,6 +43,7 @@ export RUSTUP_HOME=~/.config/rustup
 export HISTFILE=~/.cache/zsh/zsh_history
 export XAUTHORITY=~/.config/.Xauthority
 export LESSHISTFILE=-
+export FZF_COMPLETION_TRIGGER='-'
 
 alias l='exa -la --icons --no-time'
 alias fd='fd -i'
@@ -56,6 +57,14 @@ alias matlab='/Applications/MATLAB_R2023a.app/bin/matlab -nodesktop -nosplash'
 alias f='~/scripts/fzf/open_file.sh'
 alias fp='. ~/scripts/fzf/open_dir.sh'
 alias ff='cd $(fd -t d . ~/ ~/Documents ~/Downloads | fzf)'
+
+_fzf_compgen_path() {
+  fd . ~/ ~/Documents ~/Downloads
+}
+
+_fzf_compgen_dir() {
+  fd -t d . ~/ ~/Documents ~/Downloads
+}
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
