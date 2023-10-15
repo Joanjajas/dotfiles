@@ -45,7 +45,7 @@ export XAUTHORITY=~/.config/.Xauthority
 export LESSHISTFILE=-
 
 alias l='exa -la --icons --no-time'
-alias fd='fd -ui'
+alias fd='fd -i'
 alias cat=bat
 alias du=dust
 alias gs='git status'
@@ -54,6 +54,23 @@ alias python='python3'
 alias pip='python -m pip'
 alias matlab='/Applications/MATLAB_R2023a.app/bin/matlab -nodesktop -nosplash'
 alias nv='neovide'
+alias f='~/scripts/fzf_open_file.sh'
+alias fp='~/scripts/fzf_open_dir.sh'
+alias ff='cd $(fd -t d . ~/ ~/Documents ~/Downloads | fzf)'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
+
+# Setup fzf
+# ---------
+if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
+  PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
+fi
+
+# Auto-completion
+# ---------------
+[[ $- == *i* ]] && source "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+# ------------
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
