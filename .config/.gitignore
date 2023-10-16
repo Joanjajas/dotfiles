@@ -2,3 +2,8 @@
 
 !.gitignore
 !nvim
+
+# ignore everything in tmux except tmux.conf
+!tmux
+tmux/*
+!tmux/tmux.conf
