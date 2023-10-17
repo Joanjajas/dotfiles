@@ -52,11 +52,11 @@ alias fa='~/scripts/fzf/find_all.sh'
 
 # fzf stuff
 _fzf_compgen_path() {
-    fd -u -E Library -E node_modules -E .vscode -E .git -E .cache -E .config/cargo/registry -E .config/rustup -E Plublic -E Pictures -E Music -E Movies -E .DS_Store
+    fd -u . ~/  -E Library -E node_modules -E .vscode -E .git -E .cache -E .config/cargo/registry -E .config/rustup -E Plublic -E Pictures -E Music -E Movies -E .DS_Store
 }
 
 _fzf_compgen_dir() {
-    fd -t d -u -E Library -E node_modules -E .vscode -E .git -E .cache -E .config/cargo/registry -E .config/rustup -E Plublic -E Pictures -E Music -E Movies -E .DS_Store
+    fd -t d -u . ~/ -E Library -E node_modules -E .vscode -E .git -E .cache -E .config/cargo/registry -E .config/rustup -E Plublic -E Pictures -E Music -E Movies -E .DS_Store
 }
 
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
