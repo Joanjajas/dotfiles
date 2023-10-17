@@ -1,6 +1,8 @@
 format = '''
-$username$hostname $os $directory $git_branch $git_status
+$username$hostname $os $directory $git_branch $git_status$character
 '''
+
+add_newline = false
 
 [username]
 show_always = true
@@ -33,3 +35,6 @@ format = "[$symbol]($style)"
 
 [os.symbols]
 Macos = ""
+
+[character]
+success_symbol = "[](#d1b03a)"
