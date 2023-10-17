@@ -1,16 +1,5 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded
-ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to change how often to auto-update (in days).
 export UPDATE_ZSH_DAYS=3
@@ -43,7 +32,9 @@ export RUSTUP_HOME=~/.config/rustup
 export HISTFILE=~/.cache/zsh/zsh_history
 export XAUTHORITY=~/.config/.Xauthority
 export LESSHISTFILE=-
-export FZF_COMPLETION_TRIGGER='-'
+export FZF_COMPLETION_TRIGGER='--'
+export STARSHIP_CONFIG=~/.config/starship/starship.toml
+
 
 alias l='exa -la --icons --no-time'
 alias fd='fd -i'
@@ -57,28 +48,30 @@ alias matlab='/Applications/MATLAB_R2023a.app/bin/matlab -nodesktop -nosplash'
 alias f='~/scripts/fzf/open_file.sh'
 alias fp='. ~/scripts/fzf/open_dir.sh'
 alias ff='cd $(fd -t d . ~/ ~/Documents ~/Downloads | fzf)'
+alias fa='~/scripts/fzf/find_all.sh'
 
+# fzf stuff
 _fzf_compgen_path() {
-  fd . ~/ ~/Documents ~/Downloads
+    fd -u -E Library -E node_modules -E .vscode -E .git -E .cache -E .config/cargo/registry -E .config/rustup -E Plublic -E Pictures -E Music -E Movies -E .DS_Store
 }
 
 _fzf_compgen_dir() {
-  fd -t d . ~/ ~/Documents ~/Downloads
+    fd -t d -u -E Library -E node_modules -E .vscode -E .git -E .cache -E .config/cargo/registry -E .config/rustup -E Plublic -E Pictures -E Music -E Movies -E .DS_Store
 }
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh ]] || source ~/.config/oh-my-zsh/custom/themes/powerlevel10k/p10k.zsh
 
-# Setup fzf
-# ---------
 if [[ ! "$PATH" == */opt/homebrew/opt/fzf/bin* ]]; then
   PATH="${PATH:+${PATH}:}/opt/homebrew/opt/fzf/bin"
 fi
 
-# Auto-completion
-# ---------------
 [[ $- == *i* ]] && source "/opt/homebrew/opt/fzf/shell/completion.zsh" 2> /dev/null
 
-# Key bindings
-# ------------
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+
+# run tmux on startup or attach to existing session
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+    tmux new-session -A
+fi
+
+eval "$(starship init zsh)"
