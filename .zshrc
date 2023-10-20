@@ -11,6 +11,7 @@ export CARGO_HOME=~/.config/cargo
 export FZF_COMPLETION_TRIGGER='--'
 export LESSHISTFILE=-
 
+alias ..='cd ..'
 alias l='exa -la --icons --no-time'
 alias fd='fd -i'
 alias cat=bat
