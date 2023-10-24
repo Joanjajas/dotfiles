@@ -18,13 +18,15 @@ alias cat=bat
 alias du=dust
 alias gs='git status'
 alias clear='printf "\33c\e[3J"'
-alias python='python3'
+alias python='/opt/homebrew/bin/python3'
 alias pip='python -m pip'
 
 alias f='~/scripts/fzf/open_file.sh'
 alias fa='~/scripts/fzf/find_all.sh'
 alias fp='. ~/scripts/fzf/open_dir.sh'
 alias ff='cd $(fd -t d . ~/ ~/Documents ~/Downloads | fzf)'
+
+bindkey -M emacs '^P' fzf-history-widget
 
 # fzf stuff
 _fzf_compgen_path() {
