@@ -38,4 +38,5 @@ Macos = ""
 
 [character]
 success_symbol = "[](#d1b03a)"
+vimcmd_symbol = "[](#d1b03a)"
 error_symbol = "[](bold red)"

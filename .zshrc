@@ -1,3 +1,9 @@
+# zsh vi mode keybindings
+bindkey -v
+bindkey -v '^?' backward-delete-char
+bindkey -M viins ^P fzf-history-widget
+bindkey -M viins kj vi-cmd-mode
+
 # Source cargo binaries 
 if [[ -a ~/.config/cargo ]]
 then
