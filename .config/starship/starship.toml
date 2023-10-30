@@ -1,5 +1,5 @@
 format = '''
-$username$hostname $os $directory $git_branch $git_status$character
+$username$hostname$os$directory$git_commit$git_branch$git_status$character$git_state
 '''
 
 add_newline = false
@@ -13,17 +13,17 @@ format = "[$user@]($style)"
 [hostname]
 ssh_only = false
 style = "#d1b03a"
-format = "[$hostname]($style)"
+format = "[$hostname]($style) "
 
 [directory]
 style = "#4eacd3"
 read_only_style = "#4eacd3"
-format = "[$path]($style)[$read_only]($read_only_style)"
+format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
 style = "#eb4cd1"
 symbol = "   "
-format = "[$symbol$branch(:$remote_branch)]($style)"
+format = "[$symbol$branch(:$remote_branch)]($style) "
 
 [git_status]
 style = "#ea4362"
@@ -31,7 +31,7 @@ style = "#ea4362"
 [os]
 disabled = false
 style = "#4eacd3"
-format = "[$symbol]($style)"
+format = "[$symbol]($style) "
 
 [os.symbols]
 Macos = ""
@@ -40,3 +40,4 @@ Macos = ""
 success_symbol = "[](#d1b03a)"
 vimcmd_symbol = "[](#d1b03a)"
 error_symbol = "[](bold red)"
+format = "[$symbol]($style) "
