@@ -30,7 +30,7 @@ alias ff='cd $(fd -t d . ~/ ~/Documents ~/Downloads | fzf)'
 
 # commit and push to git
 function git_commit_push() {
-    message=$1
+    message=$*
     if [ -z "$message" ]; then
         printf "Commit message: "
         read message
