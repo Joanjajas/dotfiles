@@ -36,6 +36,7 @@ function git_commit_push() {
         read message
     fi
     git add .
+    git commit -m "$message"
     git push
 }
 
