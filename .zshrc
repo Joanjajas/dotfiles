@@ -16,6 +16,7 @@ export LESSHISTFILE=-
 # aliases
 alias cat=bat
 alias du=dust
+alias nv=nvim
 alias ..='cd ..'
 alias l='exa -la --icons --no-time'
 alias gs='git status'
