@@ -6,4 +6,6 @@ rm -rf ~/.cache/nvim
 rm -rf ~/.local/state/nvim
 
 git clone git@github.com:Joanjajas/nvim.git ~/.config/nvim
-nvim +MasonInstallAll +TSUpdate
+printf "Setting up neovim...\n"
+nvim --headless +MasonInstallAll +qa 2>/dev/null
+printf "Done!\n"
