@@ -19,6 +19,7 @@ alias du=dust
 alias ..='cd ..'
 alias l='exa -la --icons --no-time'
 alias gs='git status'
+alias gd='git diff'
 alias gc='git_commit_push'
 alias pip='python -m pip'
 alias python='/opt/homebrew/bin/python3'
