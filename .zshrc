@@ -33,7 +33,7 @@ alias f='$HOME/scripts/fzf/open_file.sh'
 alias fa='$HOME/scripts/fzf/open_all.sh'
 alias fp='. $HOME/scripts/fzf/open_dir.sh'
 alias ff='. $HOME/scripts/fzf/find_dir.sh'
-alias fgs='. $HOME/scripts/fzf/open_git.sh.sh'
+alias fgs='. $HOME/scripts/fzf/open_git.sh'
 
 # autocomplete when completing a path with fzf
 _fzf_compgen_path() {
