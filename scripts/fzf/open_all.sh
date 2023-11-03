@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
+start_dir=$(pwd)
 selected_file=$(
 	fd -u . ~/ \
 		-E Library \
@@ -16,7 +17,10 @@ selected_file=$(
 		-E .DS_Store |
 		fzf
 )
+selected_dir=$(dirname "$selected_file")
 
 if [ -n "$selected_file" ]; then
+	cd "$selected_dir" || exit
 	nvim "$selected_file"
+	cd "$start_dir" || exit
 fi
