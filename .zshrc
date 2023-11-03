@@ -49,6 +49,6 @@ eval "$(starship init zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # run tmux on startup or attach to existing session
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if [ -z "$TMUX" ]; then
     tmux new-session -A
 fi
