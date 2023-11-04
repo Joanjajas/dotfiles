@@ -20,6 +20,7 @@ alias nv=nvim
 
 alias gd='git diff'
 alias gs='git status'
+alias gr='git restore .'
 alias gc='$HOME/scripts/git/git_commit_push.sh'
 
 alias ..='cd ..'
