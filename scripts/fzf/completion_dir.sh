@@ -1,15 +1,18 @@
 #!/usr/bin/env sh
 
-fd -t d -u . ~/ \
+fd -u . ~/ \
 	-E Library \
 	-E node_modules \
 	-E .vscode \
 	-E .git \
 	-E .cache \
-	-E .config/cargo/registry \
+	-E .config/cargo \
 	-E .config/rustup \
 	-E Public \
 	-E Pictures \
 	-E Music \
 	-E Movies \
-	-E .DS_Store
+	-E .DS_Store \
+	-E target \
+	-E .local \
+	-E .npm
