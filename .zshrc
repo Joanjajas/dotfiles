@@ -7,6 +7,7 @@ bindkey -M viins '^P' fzf-history-widget
 
 # env vars
 export LESSHISTFILE=-
+export EDITOR=nvim
 export FZF_COMPLETION_TRIGGER='--'
 export CARGO_HOME=~/.config/cargo
 export RUSTUP_HOME=~/.config/rustup
