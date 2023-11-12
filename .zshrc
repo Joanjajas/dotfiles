@@ -31,11 +31,12 @@ alias l='exa -la --icons --no-time'
 alias pip='python -m pip'
 alias python='/opt/homebrew/bin/python3'
 
-alias f='. $HOME/scripts/fzf/open_file.sh'
-alias fa='. $HOME/scripts/fzf/open_all.sh'
-alias fp='. $HOME/scripts/fzf/open_dir.sh'
-alias ff='. $HOME/scripts/fzf/find_dir.sh'
-alias fgs='. $HOME/scripts/fzf/open_git.sh'
+alias ff='. $HOME/scripts/fzf/cd_dir'
+alias fp='. $HOME/scripts/fzf/open_dir'
+alias f='. $HOME/scripts/fzf/open_file'
+alias fa='. $HOME/scripts/fzf/open_file_all'
+alias fgs='. $HOME/scripts/fzf/open_git_status'
+alias fpf='. $HOME/scripts/fzf/open_git_file'
 
 # autocomplete when completing a path with fzf
 _fzf_compgen_path() {
