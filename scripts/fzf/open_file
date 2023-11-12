@@ -1,7 +1,11 @@
 #!/usr/bin/env sh
 
 start_path=$(pwd)
-selected_path=$(fd . ~/ ~/Documents ~/Downloads | fzf)
+selected_path=$( (
+	fd . ~/ ~/Documents ~/Downloads
+	echo ~/Documents
+	echo ~/Downloads
+) | fzf)
 
 # if path is a file, open it in nvim
 if [ -f "$selected_path" ]; then
