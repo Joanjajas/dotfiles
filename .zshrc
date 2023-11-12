@@ -39,12 +39,12 @@ alias fp='. $HOME/scripts/fzf/open_file'
 
 # autocomplete when completing a path with fzf
 _fzf_compgen_path() {
-    $HOME/scripts/fzf/completion_path.sh
+    $HOME/scripts/fzf/completion_path
 }
 
 # autocomplete when completing a directory with fzf
 _fzf_compgen_dir() {
-    $HOME/scripts/fzf/completion_dir.sh
+    $HOME/scripts/fzf/completion_dir
 }
 
 source "/opt/homebrew/opt/fzf/shell/completion.zsh"
