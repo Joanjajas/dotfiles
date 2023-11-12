@@ -1,11 +1,18 @@
 #!/usr/bin/env sh
 
-start_dir=$(pwd)
-selected_file=$(fd -t f . ~/ ~/Documents ~/Downloads | fzf)
-selected_dir=$(dirname "$selected_file")
+start_path=$(pwd)
+selected_path=$(fd . ~/ ~/Documents ~/Downloads | fzf)
 
-if [ -n "$selected_file" ]; then
-	cd "$selected_dir" || exit
-	nvim "$selected_file"
-	cd "$start_dir" || exit
+# if path is a file, open it in nvim
+if [ -f "$selected_path" ]; then
+	cd "$(dirname "$selected_path")" || exit
+	nvim "$selected_path"
+	cd "$start_path" || exit
+fi
+
+# if path is a directory, open nvim on it
+if [ -d "$selected_path" ]; then
+	cd "$selected_path" || exit
+	nvim "$selected_path"
+	cd "$start_path" || exit
 fi
