@@ -3,7 +3,11 @@
 start_path=$(pwd)
 selected_path=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | fzf | awk '{print $2}')
 
-if [ -n "$selected_path" ]; then
+if [ -f "$selected_path" ]; then
 	nvim "$selected_path"
 	cd "$start_path" || exit
+fi
+
+if [ -d "$selected_path" ]; then
+	cd "$selected_path" || exit
 fi
