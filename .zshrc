@@ -54,6 +54,10 @@ source "$HOME/.config/cargo/env"
 eval "$(starship init zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# case insensitive completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit
+
 # run tmux on startup or attach to existing session
 if [ -z "$TMUX" ]; then
     tmux new-session -A

@@ -2,8 +2,10 @@
 
 start_path=$(pwd)
 selected_path=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | fzf | awk '{print $2}')
+printf "%s\n" "$selected_path"
 
 if [ -n "$selected_path" ]; then
+	cd "$(git rev-parse --show-toplevel)" || exit
 	nvim "$selected_path"
 	cd "$start_path" || exit
 fi
