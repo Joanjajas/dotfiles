@@ -1,8 +1,9 @@
 #!/usr/bin/env sh
 
-selected_dir=$( (
+SELECTED_DIR=$( (
 	fd -t d . ~/ ~/Documents ~/Downloads
 	echo ~/Documents
 	echo ~/Downloads
 ) | fzf)
-cd "$selected_dir" || exit
+
+cd "$SELECTED_DIR" || exit

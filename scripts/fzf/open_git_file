@@ -1,21 +1,21 @@
 #!/usr/bin/env sh
 
-selected_path=$( (
+SELECTED_PATH=$( (
 	fd . ~/ ~/Documents ~/Downloads
 	echo ~/Documents
 	echo ~/Downloads
 ) | fzf)
 
 # if path is a file, open it in nvim
-if [ -f "$selected_path" ]; then
-	cd "$(dirname "$selected_path")" || exit
+if [ -f "$SELECTED_PATH" ]; then
+	cd "$(dirname "$SELECTED_PATH")" || exit
 	cd "$(git rev-parse --show-toplevel)" || exit
-	nvim "$selected_path"
+	nvim "$SELECTED_PATH"
 fi
 
 # if path is a directory, open nvim on it
-if [ -d "$selected_path" ]; then
-	cd "$selected_path" || exit
+if [ -d "$SELECTED_PATH" ]; then
+	cd "$SELECTED_PATH" || exit
 	cd "$(git rev-parse --show-toplevel)" || exit
-	nvim "$selected_path"
+	nvim "$SELECTED_PATH"
 fi

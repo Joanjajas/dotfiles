@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-start_path=$(pwd)
-selected_path=$(
+START_PATH=$(pwd)
+SELECTED_PATH=$(
 	fd -u . ~/ \
 		-E Library \
 		-E node_modules \
@@ -22,17 +22,17 @@ selected_path=$(
 )
 
 # if path is a file, open it in nvim
-if [ -f "$selected_path" ]; then
-	cd "$(dirname "$selected_path")" || exit
+if [ -f "$SELECTED_PATH" ]; then
+	cd "$(dirname "$SELECTED_PATH")" || exit
 	cd "$(git rev-parse --show-toplevel)" || exit
-	nvim "$selected_path"
-	cd "$start_path" || exit
+	nvim "$SELECTED_PATH"
+	cd "$START_PATH" || exit
 fi
 
 # if path is a directory, open nvim on it
-if [ -d "$selected_path" ]; then
-	cd "$selected_path" || exit
+if [ -d "$SELECTED_PATH" ]; then
+	cd "$SELECTED_PATH" || exit
 	cd "$(git rev-parse --show-toplevel)" || exit
-	nvim "$selected_path"
-	cd "$start_path" || exit
+	nvim "$SELECTED_PATH"
+	cd "$START_PATH" || exit
 fi

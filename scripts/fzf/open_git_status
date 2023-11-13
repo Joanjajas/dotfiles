@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 
-start_path=$(pwd)
-selected_path=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | fzf | awk '{print $2}')
-printf "%s\n" "$selected_path"
+START_PATH=$(pwd)
+SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | fzf | awk '{print $2}')
+printf "%s\n" "$SELECTED_PATH"
 
-if [ -n "$selected_path" ]; then
+if [ -n "$SELECTED_PATH" ]; then
 	cd "$(git rev-parse --show-toplevel)" || exit
-	nvim "$selected_path"
-	cd "$start_path" || exit
+	nvim "$SELECTED_PATH"
+	cd "$START_PATH" || exit
 fi
