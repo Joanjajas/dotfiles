@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+MESSAGE=$*
+
+if [ -z "$MESSAGE" ]; then
+	printf "Commit message: "
+	read -r MESSAGE
+fi
+
+git add .
+git commit -m "$MESSAGE"
+git push
