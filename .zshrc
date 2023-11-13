@@ -6,13 +6,13 @@ bindkey -M emacs '^P' fzf-history-widget
 bindkey -M viins '^P' fzf-history-widget
 
 # env vars
-export LESSHISTFILE=-
 export EDITOR=nvim
+export LESSHISTFILE=-
+export CARGO_HOME=$HOME/.config/cargo
+export RUSTUP_HOME=$HOME/.config/rustup
+export HISTFILE=$HOME/.cache/zsh/zsh_history
+export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export FZF_COMPLETION_TRIGGER='--'
-export CARGO_HOME=~/.config/cargo
-export RUSTUP_HOME=~/.config/rustup
-export HISTFILE=~/.cache/zsh/zsh_history
-export STARSHIP_CONFIG=~/.config/starship/starship.toml
 
 # aliases
 alias cat=bat
@@ -56,7 +56,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # case insensitive completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-autoload -Uz compinit && compinit
+autoload -Uz compinit && compinit -d $HOME/.cache/zsh/zcompdump
 
 # run tmux on startup or attach to existing session
 if [ -z "$TMUX" ]; then
