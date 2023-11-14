@@ -37,6 +37,22 @@ alias fgs='. $HOME/scripts/fzf/open_git_status'
 alias ff='. $HOME/scripts/fzf/cd_dir'
 alias f='. $HOME/scripts/fzf/open_file'
 
+# sources
+source "/opt/homebrew/opt/fzf/shell/completion.zsh"
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+source "$HOME/.config/cargo/env"
+
+# evals
+eval "$(starship init zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# zsh options
+setopt HIST_IGNORE_SPACE
+
+# case insensitive completion
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+autoload -Uz compinit && compinit -d $HOME/.cache/zsh/zcompdump
+
 # autocomplete when completing a path with fzf
 _fzf_compgen_path() {
     $HOME/scripts/fzf/completion_path
@@ -47,16 +63,6 @@ _fzf_compgen_dir() {
     $HOME/scripts/fzf/completion_dir
 }
 
-source "/opt/homebrew/opt/fzf/shell/completion.zsh"
-source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
-source "$HOME/.config/cargo/env"
-
-eval "$(starship init zsh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# case insensitive completion
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-autoload -Uz compinit && compinit -d $HOME/.cache/zsh/zcompdump
 
 # run tmux on startup or attach to existing session
 if [ -z "$TMUX" ]; then
