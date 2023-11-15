@@ -22,6 +22,7 @@ alias nv=nvim
 alias gd='git diff'
 alias gs='git status'
 alias gr='git restore .'
+alias gl='git clone'
 alias ghe='gh copilot explain'
 alias ghs='gh copilot suggest'
 alias gc='$HOME/scripts/git/git_commit_push'
