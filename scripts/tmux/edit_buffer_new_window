@@ -3,6 +3,6 @@
 TEMP_FILE=$(mktemp -p /tmp)
 tmux capture-pane -pS - >"$TEMP_FILE"
 sed -i '' -e '/./,$!d' -e :a -e '/^\n*$/{$d;N;ba' -e '}' "$TEMP_FILE"
-tmux send-keys " $EDITOR  + -c 'set readonly' $TEMP_FILE && printf '\033[1A\033[1A\033[K'" Enter
+tmux new-window "$EDITOR + -c 'set readonly' $TEMP_FILE"
 sleep 0.1
 trap 'rm -f $TEMP_FILE' EXIT

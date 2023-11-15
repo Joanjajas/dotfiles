@@ -22,6 +22,8 @@ alias nv=nvim
 alias gd='git diff'
 alias gs='git status'
 alias gr='git restore .'
+alias ghe='gh copilot explain'
+alias ghs='gh copilot suggest'
 alias gc='$HOME/scripts/git/git_commit_push'
 
 alias ..='cd ..'
@@ -41,6 +43,9 @@ alias f='. $HOME/scripts/fzf/open_file'
 source "/opt/homebrew/opt/fzf/shell/completion.zsh"
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 source "$HOME/.config/cargo/env"
+
+# Completion sources
+fpath=($HOME/scripts/zsh_completions/ $fpath)
 
 # evals
 eval "$(starship init zsh)"
@@ -62,7 +67,6 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
     $HOME/scripts/fzf/completion_dir
 }
-
 
 # run tmux on startup or attach to existing session
 if [ -z "$TMUX" ]; then
