@@ -7,16 +7,21 @@ SELECTED_PATH=$( (
 	echo ~/Downloads
 ) | fzf)
 
-# if path is a file, open it in nvim
-if [ -f "$SELECTED_PATH" ]; then
-	cd "$(dirname "$SELECTED_PATH")" || exit
-	nvim "$SELECTED_PATH"
-	cd "$START_PATH" || exit
+# if no path was selected, exit
+if [ -z "$SELECTED_PATH" ]; then
+	return
 fi
 
-# if path is a directory, open nvim on it
-if [ -d "$SELECTED_PATH" ]; then
-	cd "$SELECTED_PATH" || exit
-	nvim "$SELECTED_PATH"
-	cd "$START_PATH" || exit
+# if the selected path is a file, cd to the directory it is in
+if [ -f "$SELECTED_PATH" ]; then
+	cd "$(dirname "$SELECTED_PATH")" || return
 fi
+
+# if the selected path is a directory, cd to it
+if [ -d "$SELECTED_PATH" ]; then
+	cd "$SELECTED_PATH" || return
+fi
+
+# open the selected path in nvim and later cd back to the start path
+nvim "$SELECTED_PATH"
+cd "$START_PATH" || return

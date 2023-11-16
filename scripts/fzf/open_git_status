@@ -2,10 +2,15 @@
 
 START_PATH=$(pwd)
 SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | fzf | awk '{print $2}')
-printf "%s\n" "$SELECTED_PATH"
 
-if [ -n "$SELECTED_PATH" ]; then
-	cd "$(git rev-parse --show-toplevel)" || exit
-	nvim "$SELECTED_PATH"
-	cd "$START_PATH" || exit
+# if no path was selected, exit
+if [ -z "$SELECTED_PATH" ]; then
+	return
 fi
+
+# cd to the root of the git repo and open the selected file in nvim
+cd "$(git rev-parse --show-toplevel)" || return
+nvim "$SELECTED_PATH"
+
+# cd back to the start path
+cd "$START_PATH" || return
