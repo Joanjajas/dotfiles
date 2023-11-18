@@ -39,6 +39,5 @@ if [ -d "$SELECTED_PATH" ]; then
 	cd "$(git rev-parse --show-toplevel)" || return
 fi
 
-# open the selected path in nvim and later cd back to the start path
+# open the selected path in nvim
 nvim "$SELECTED_PATH"
-cd "$START_PATH" || return
