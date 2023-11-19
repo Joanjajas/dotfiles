@@ -7,14 +7,15 @@
 █   ██ █▄▄▄▄▄ ▄▄▄▄▄█ █  █ █  █   █  █ █    █▄▄ 
 █▄▄▄██▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█▄▄█ █▄▄█▄▄▄█  █▄█▄▄▄▄▄▄▄█
 
-Dotfiles by joanjajas
+
+Dotfiles by @joanjajas
 
 https://github.com/joanjajas/dotfiles
 
 '
 
 ################################################################################
-# keybinds
+# Keybinds
 ################################################################################
 bindkey -v
 bindkey -M viins kj vi-cmd-mode
@@ -23,7 +24,7 @@ bindkey -M emacs '^P' fzf-history-widget
 bindkey -M viins '^P' fzf-history-widget
 
 ################################################################################
-# env vars
+# Env vars
 ################################################################################
 export EDITOR=nvim
 export LESSHISTFILE=-
@@ -34,7 +35,7 @@ export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export FZF_COMPLETION_TRIGGER='--'
 
 ################################################################################
-# aliases
+# Aliases
 ################################################################################
 
 # general
@@ -69,7 +70,7 @@ alias ff='. $HOME/scripts/fzf/cd_dir'
 alias f='. $HOME/scripts/fzf/open_file'
 
 ################################################################################
-# zsh options
+# Zsh options
 ################################################################################
 
 # ignore commands starting with space
@@ -80,7 +81,7 @@ zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=
 autoload -Uz compinit && compinit -d $HOME/.cache/zsh/zcompdump
 
 ################################################################################
-# fzf options
+# Fzf options
 ################################################################################
 
 # fzf complete path
@@ -94,7 +95,7 @@ _fzf_compgen_dir() {
 }
 
 ################################################################################
-# sources
+# Sources
 ################################################################################
 source "/opt/homebrew/opt/fzf/shell/completion.zsh"
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
@@ -104,13 +105,13 @@ source "$HOME/.config/cargo/env"
 fpath=($HOME/scripts/zsh_completions/ $fpath)
 
 ################################################################################
-# evals
+# Evals
 ################################################################################
 eval "$(starship init zsh)"
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ################################################################################
-# startup
+# Startup
 ################################################################################
 
 # run tmux on startup or attach to existing session
