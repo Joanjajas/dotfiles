@@ -18,8 +18,8 @@ https://github.com/joanjajas/dotfiles
 # Keybinds
 ################################################################################
 bindkey -v
-bindkey -M viins kj vi-cmd-mode
 bindkey -v '^?' backward-delete-char
+bindkey -M viins kj vi-cmd-mode
 bindkey -M emacs '^P' fzf-history-widget
 bindkey -M viins '^P' fzf-history-widget
 
