@@ -70,6 +70,22 @@ alias ff='. $HOME/scripts/fzf/cd_dir'
 alias f='. $HOME/scripts/fzf/open_file'
 
 ################################################################################
+# Sources
+################################################################################
+source "/opt/homebrew/opt/fzf/shell/completion.zsh"
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+source "$HOME/.config/cargo/env"
+
+# Completion sources
+fpath=($HOME/scripts/zsh_completions/ $fpath)
+
+################################################################################
+# Evals
+################################################################################
+eval "$(starship init zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+################################################################################
 # Zsh options
 ################################################################################
 
@@ -93,22 +109,6 @@ _fzf_compgen_path() {
 _fzf_compgen_dir() {
     $HOME/scripts/fzf/completion_dir
 }
-
-################################################################################
-# Sources
-################################################################################
-source "/opt/homebrew/opt/fzf/shell/completion.zsh"
-source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
-source "$HOME/.config/cargo/env"
-
-# Completion sources
-fpath=($HOME/scripts/zsh_completions/ $fpath)
-
-################################################################################
-# Evals
-################################################################################
-eval "$(starship init zsh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ################################################################################
 # Startup
