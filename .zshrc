@@ -47,6 +47,11 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
 alias l='exa -la --icons --no-time'
+alias fzf='fzf \
+--reverse \
+--preview "bat --color=always {}" \
+--preview-window hidden \
+--bind="ctrl-p:toggle-preview"'
 
 # python
 alias pip='python -m pip'
