@@ -8,20 +8,20 @@ SELECTED_PATH=$( (
 
 # if no path was selected, exit
 if [ -z "$SELECTED_PATH" ]; then
-	return
+	exit
 fi
 
 # if the selected path is a file, cd to the directory it is in and then to the
 # git root
 if [ -f "$SELECTED_PATH" ]; then
-	cd "$(dirname "$SELECTED_PATH")" || return
-	cd "$(git rev-parse --show-toplevel)" || return
+	cd "$(dirname "$SELECTED_PATH")" || exit
+	cd "$(git rev-parse --show-toplevel)" || exit
 fi
 
 # if the selected path is a directory, cd to it and then to the git root
 if [ -d "$SELECTED_PATH" ]; then
-	cd "$SELECTED_PATH" || return
-	cd "$(git rev-parse --show-toplevel)" || return
+	cd "$SELECTED_PATH" || exit
+	cd "$(git rev-parse --show-toplevel)" || exit
 fi
 
 # open the selected path in nvim
