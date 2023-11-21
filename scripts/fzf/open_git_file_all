@@ -1,6 +1,5 @@
 #!/usr/bin/env sh
 
-START_PATH=$(pwd)
 SELECTED_PATH=$(
 	fd -u . ~/ \
 		-E Library \
@@ -21,22 +20,22 @@ SELECTED_PATH=$(
 		fzf
 )
 
-# if no path was selected, exit
+# if no path was selected, return
 if [ -z "$SELECTED_PATH" ]; then
-	exit
+	return
 fi
 
 # if the selected path is a file, cd to the directory it is in and then to the
 # git root
 if [ -f "$SELECTED_PATH" ]; then
-	cd "$(dirname "$SELECTED_PATH")" || exit
-	cd "$(git rev-parse --show-toplevel)" || exit
+	cd "$(dirname "$SELECTED_PATH")" || return
+	cd "$(git rev-parse --show-toplevel)" || return
 fi
 
 # if the selected path is a directory, cd to it and then to the git root
 if [ -d "$SELECTED_PATH" ]; then
-	cd "$SELECTED_PATH" || exit
-	cd "$(git rev-parse --show-toplevel)" || exit
+	cd "$SELECTED_PATH" || return
+	cd "$(git rev-parse --show-toplevel)" || return
 fi
 
 # open the selected path in nvim

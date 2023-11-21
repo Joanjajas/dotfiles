@@ -6,4 +6,4 @@ SELECTED_DIR=$( (
 	echo ~/Downloads
 ) | fzf)
 
-cd "$SELECTED_DIR" || exit
+cd "$SELECTED_DIR" || return

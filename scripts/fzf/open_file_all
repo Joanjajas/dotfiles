@@ -21,21 +21,21 @@ SELECTED_PATH=$(
 		fzf
 )
 
-# if no path was selected, exit
+# if no path was selected, return
 if [ -z "$SELECTED_PATH" ]; then
-	exit
+	return
 fi
 
 # if the selected path is a file, cd to the directory it is in
 if [ -f "$SELECTED_PATH" ]; then
-	cd "$(dirname "$SELECTED_PATH")" || exit
+	cd "$(dirname "$SELECTED_PATH")" || return
 fi
 
 # if the selected path is a directory, cd to it
 if [ -d "$SELECTED_PATH" ]; then
-	cd "$SELECTED_PATH" || exit
+	cd "$SELECTED_PATH" || return
 fi
 
 # open the selected path in nvim and later cd back to the start path
 nvim "$SELECTED_PATH"
-cd "$START_PATH" || exit
+cd "$START_PATH" || return

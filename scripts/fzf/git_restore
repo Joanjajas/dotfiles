@@ -3,14 +3,14 @@
 START_PATH=$(pwd)
 SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | fzf | awk '{print $2}')
 
-# if no path was selected, exit
+# if no path was selected, return
 if [ -z "$SELECTED_PATH" ]; then
-	exit
+	return
 fi
 
 # cd to the root of the git repo and restore the selected
-cd "$(git rev-parse --show-toplevel)" || exit
+cd "$(git rev-parse --show-toplevel)" || return
 git restore "$SELECTED_PATH"
 
 # cd back to the start path
-cd "$START_PATH" || exit
+cd "$START_PATH" || return
