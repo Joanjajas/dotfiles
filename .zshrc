@@ -60,10 +60,11 @@ alias python='/opt/homebrew/bin/python3'
 # git and github
 alias gd='git diff'
 alias gs='git status'
-alias gr='git restore .'
 alias gl='git clone'
 alias ghe='gh copilot explain'
 alias ghs='gh copilot suggest'
+alias gra='git restore .'
+alias gr='$HOME/scripts/fzf/git_restore'
 alias gc='$HOME/scripts/git/git_commit_push'
 
 # fzf
