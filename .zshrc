@@ -72,7 +72,7 @@ alias f='. $HOME/scripts/fzf/open_file'
 alias fp='. $HOME/scripts/fzf/open_git_file'
 alias fa='. $HOME/scripts/fzf/open_file_all'
 alias fap='. $HOME/scripts/fzf/open_git_file_all'
-alias fgs='. $HOME/scripts/fzf/open_git_status'
+alias fgs='. $HOME/scripts/fzf/git_status'
 alias ff='. $HOME/scripts/fzf/cd_dir'
 
 ################################################################################
