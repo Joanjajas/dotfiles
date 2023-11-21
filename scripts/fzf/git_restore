@@ -1,16 +1,19 @@
 #!/usr/bin/env sh
 
+# cd to the root of the git repo
+cd "$(git rev-parse --show-toplevel)" || return
+
 START_PATH=$(pwd)
-SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | fzf | awk '{print $2}')
+SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M)' | awk '{print $2}' | fzf)
 
 # if no path was selected, return
 if [ -z "$SELECTED_PATH" ]; then
 	return
 fi
 
-# cd to the root of the git repo and restore the selected
-cd "$(git rev-parse --show-toplevel)" || return
+# restore the selected path
 git restore "$SELECTED_PATH"
+printf "Restored %s\n" "$SELECTED_PATH"
 
 # cd back to the start path
 cd "$START_PATH" || return

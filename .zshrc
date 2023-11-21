@@ -64,8 +64,8 @@ alias gl='git clone'
 alias ghe='gh copilot explain'
 alias ghs='gh copilot suggest'
 alias gra='git restore .'
-alias gr='. $HOME/scripts/fzf/git_restore'
 alias gc='$HOME/scripts/git/git_commit_push'
+alias gr='. $HOME/scripts/fzf/git_restore'
 
 # fzf
 alias f='. $HOME/scripts/fzf/open_file'
