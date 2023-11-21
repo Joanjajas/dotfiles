@@ -51,7 +51,7 @@ alias fzf='fzf \
 --reverse \
 --preview "bat --color=always {}" \
 --preview-window hidden \
---bind="ctrl-p:toggle-preview"'
+--bind="ctrl-o:toggle-preview"'
 
 # python
 alias pip='python -m pip'
