@@ -1,27 +1,25 @@
 #!/usr/bin/env sh
 
-START_PATH=$(pwd)
 SELECTED_PATH=$( (
 	fd . ~/ ~/Documents ~/Downloads
 	echo ~/Documents
 	echo ~/Downloads
 ) | fzf)
 
-# if no path was selected, return
+# if no path was selected, exit
 if [ -z "$SELECTED_PATH" ]; then
-	return
+	exit
 fi
 
 # if the selected path is a file, cd to the directory it is in
 if [ -f "$SELECTED_PATH" ]; then
-	cd "$(dirname "$SELECTED_PATH")" || return
+	cd "$(dirname "$SELECTED_PATH")" || exit
 fi
 
 # if the selected path is a directory, cd to it
 if [ -d "$SELECTED_PATH" ]; then
-	cd "$SELECTED_PATH" || return
+	cd "$SELECTED_PATH" || exit
 fi
 
-# open the selected path in nvim and later cd back to the start path
+# open the selected path in nvim
 nvim "$SELECTED_PATH"
-cd "$START_PATH" || return

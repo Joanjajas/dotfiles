@@ -3,7 +3,6 @@
 # cd to the root of the git repo
 cd "$(git rev-parse --show-toplevel)" || return
 
-START_PATH=$(pwd)
 SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M|\?\?)' | awk '{print $2}' | fzf)
 
 # if no path was selected, return
@@ -13,6 +12,3 @@ fi
 
 # open the selected file in nvim
 nvim "$SELECTED_PATH"
-
-# cd back to the start path
-cd "$START_PATH" || return
