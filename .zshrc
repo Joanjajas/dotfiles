@@ -1,4 +1,5 @@
 : '
+
       ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄   ▄▄ ▄▄▄▄▄▄   ▄▄▄▄▄▄▄ 
      █       █       █  █ █  █   ▄  █ █       █
      █▄▄▄▄   █  ▄▄▄▄▄█  █▄█  █  █ █ █ █       █
@@ -33,6 +34,16 @@ export RUSTUP_HOME=$HOME/.config/rustup
 export HISTFILE=$HOME/.cache/zsh/zsh_history
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export FZF_COMPLETION_TRIGGER='--'
+export FZF_DEFAULT_OPTS="
+    --reverse
+    --bind='ctrl-o:toggle-preview'
+    --preview 
+        'if [ -f {} ]; then
+            bat {} --color=always;
+        elif [ -d {} ]; then
+            exa -la --icons --no-time {};
+        fi'
+"
 
 ################################################################################
 # Aliases
@@ -47,11 +58,6 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
 alias l='exa -la --icons --no-time'
-alias fzf='fzf \
---reverse \
---preview "bat --color=always {}" \
---preview-window hidden \
---bind="ctrl-o:toggle-preview"'
 
 # python
 alias pip='python -m pip'
