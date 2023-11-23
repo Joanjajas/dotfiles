@@ -34,9 +34,15 @@ export RUSTUP_HOME=$HOME/.config/rustup
 export HISTFILE=$HOME/.cache/zsh/zsh_history
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export FZF_COMPLETION_TRIGGER='--'
+export FZF_CTRL_R_OPTS="
+  --preview 'echo {}'
+  --preview-window hidden:wrap
+  --bind 'ctrl-o:toggle-preview'
+  "
 export FZF_DEFAULT_OPTS="
     --reverse
     --bind='ctrl-o:toggle-preview'
+    --preview-window '50%,<50(0%)' 
     --preview 
         'if [ -f {} ]; then
             bat {} --color=always;
