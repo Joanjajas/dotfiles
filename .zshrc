@@ -42,8 +42,8 @@ export FZF_CTRL_R_OPTS="
 export FZF_DEFAULT_OPTS="
     --reverse
     --bind='ctrl-o:toggle-preview'
-    --preview-window '50%,<50(0%)' 
-    --preview 
+    --preview-window '50%,<91(0%)'
+    --preview
         'if [ -f {} ]; then
             bat {} --color=always;
         elif [ -d {} ]; then
