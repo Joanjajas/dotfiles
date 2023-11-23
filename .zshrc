@@ -38,16 +38,17 @@ export FZF_CTRL_R_OPTS="
   --preview 'echo {}'
   --preview-window hidden:wrap
   --bind 'ctrl-o:toggle-preview'
-  "
+"
 export FZF_DEFAULT_OPTS="
     --reverse
-    --bind='ctrl-o:toggle-preview'
-    --preview-window '50%,<91(0%)'
+    --height 100%
+    --bind 'ctrl-o:toggle-preview'
+    --preview-window '<91(0%)'
     --preview
         'if [ -f {} ]; then
             bat {} --color=always;
         elif [ -d {} ]; then
-            exa -la --icons --no-time {};
+            exa -la --icons --no-time --git {};
         fi'
 "
 
@@ -63,7 +64,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
-alias l='exa -la --icons --no-time'
+alias l='exa -la --icons --no-time --git'
 
 # python
 alias pip='python -m pip'
