@@ -95,9 +95,6 @@ source "/opt/homebrew/opt/fzf/shell/completion.zsh"
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 source "$HOME/.config/cargo/env"
 
-# Completion sources
-fpath=($HOME/scripts/zsh_completions/ $fpath)
-
 ################################################################################
 # Evals
 ################################################################################
