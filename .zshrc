@@ -82,11 +82,10 @@ alias gr='$HOME/scripts/fzf/git_restore'
 
 # fzf
 alias f='$HOME/scripts/fzf/open_file'
-alias fa='$HOME/scripts/fzf/open_file_all'
 alias fp='. $HOME/scripts/fzf/open_git_file'
-alias fap='. $HOME/scripts/fzf/open_git_file_all'
 alias ff='. $HOME/scripts/fzf/cd_dir'
 alias fgs='$HOME/scripts/fzf/git_status'
+alias frg='$HOME/scripts/fzf/ripgrep'
 
 ################################################################################
 # Sources

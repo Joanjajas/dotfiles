@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 
 SELECTED_DIR=$( (
-	fd -t d . ~/ ~/Documents ~/Downloads
+	fd -t d . ~/ ~/Documents ~/Downloads ~/test
 	echo ~/Documents
 	echo ~/Downloads
+	echo ~/test
 ) | fzf)
 
 cd "$SELECTED_DIR" || return

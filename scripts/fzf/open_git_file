@@ -1,9 +1,10 @@
 #!/usr/bin/env sh
 
 SELECTED_PATH=$( (
-	fd . ~/ ~/Documents ~/Downloads
+	fd . ~/ ~/Documents ~/Downloads ~/test
 	echo ~/Documents
 	echo ~/Downloads
+	echo ~/test
 ) | fzf)
 
 # if no path was selected, return
