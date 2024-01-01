@@ -1,0 +1,10 @@
+[font]
+normal = { family = "ComicShannsMono Nerd Font", style = "Bold"}
+size = 13
+
+[window]
+startup_mode = "FullScreen"
+
+[colors.primary]
+background = "#000000"
+

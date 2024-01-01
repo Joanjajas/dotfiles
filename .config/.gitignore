@@ -3,6 +3,7 @@
 !.gitignore
 !nvim
 !starship
+!alacritty
 
 # ignore everything in tmux except tmux.conf
 !tmux
