@@ -3,8 +3,8 @@
 RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --colors 'match:fg:green' --colors 'path:fg:blue' --colors 'line:fg:yellow'"
 
 fzf --ansi --disabled \
-	--bind "start:reload:$RG_PREFIX {q} ." \
-	--bind "change:reload:sleep 0; $RG_PREFIX {q} || true" \
+	--bind "start:reload:$RG_PREFIX {q} . ~/Documents ~/Downloads ~/test" \
+	--bind "change:reload:sleep 0; $RG_PREFIX {q} . ~/Documents ~/Downloads ~/test || true" \
 	--bind "ctrl-p:unbind(change,alt-enter)+change-prompt(2. fzf> )+enable-search+clear-query" \
 	--color "hl:green,hl+:green" \
 	--prompt '1. ripgrep> ' \
