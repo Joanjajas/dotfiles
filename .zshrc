@@ -34,7 +34,7 @@ export RUSTUP_HOME=$HOME/.config/rustup
 export HISTFILE=$HOME/.cache/zsh/zsh_history
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export MANPAGER='nvim +Man!'
-export FZF_COMPLETION_TRIGGER='--'
+export FZF_COMPLETION_TRIGGER='__'
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}'
   --preview-window hidden:wrap
