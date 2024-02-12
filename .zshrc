@@ -66,6 +66,7 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
 alias l='exa -la --icons --no-time --git'
+alias matlab='/Applications/MATLAB_R2023b.app/bin/matlab -nodesktop -nosplash'
 
 # python
 alias pip='python -m pip'
