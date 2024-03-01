@@ -1,5 +1,5 @@
 format = '''
-$username$hostname$os$directory$git_commit$git_branch$git_status$character$git_state
+$username$hostname$os$directory$git_commit$git_branch$python$git_status$character$git_state
 '''
 
 add_newline = false
@@ -34,6 +34,9 @@ format = "[$symbol]($style) "
 
 [os.symbols]
 Macos = ""
+
+[python]
+format = '[( \[$virtualenv\] )]($style)'
 
 [character]
 success_symbol = "[](#d1b03a)"

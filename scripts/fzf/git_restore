@@ -3,7 +3,7 @@
 # cd to the root of the git repo
 cd "$(git rev-parse --show-toplevel)" || exit
 
-SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M)' | awk '{print $2}' | fzf)
+SELECTED_PATH=$(git status --porcelain | grep -E '^(M|M | M|D|D | D)' | awk '{print $2}' | fzf)
 
 # if no path was selected, exit
 if [ -z "$SELECTED_PATH" ]; then

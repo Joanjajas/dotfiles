@@ -1,0 +1,14 @@
+#!/usr/bin/env sh
+
+URL=$1
+REPO_NAME=$(echo "$URL" | rev | cut -d'/' -f1 | rev | cut -d'.' -f1)
+
+if [ -z "$URL" ]; then
+	echo "URL not provided"
+	exit
+fi
+
+git clone "$URL" ~/test/"$REPO_NAME" || exit
+cd ~/test/"$REPO_NAME" || exit
+nvim .
+rm -rf ~/test/"$REPO_NAME"

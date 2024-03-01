@@ -67,10 +67,11 @@ alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
 alias l='exa -la --icons --no-time --git'
 alias matlab='/Applications/MATLAB_R2023b.app/bin/matlab -nodesktop -nosplash'
+alias matlabr='$HOME/scripts/matlab_run'
 
 # python
-alias pip='python -m pip'
-alias python='/opt/homebrew/bin/python3'
+alias pip='pip3'
+alias python='python3'
 
 # git and github
 alias gd='git diff'
@@ -82,6 +83,7 @@ alias ghb='gh browse'
 alias gra='git restore .'
 alias gc='$HOME/scripts/git/git_commit_push'
 alias gr='$HOME/scripts/fzf/git_restore'
+alias or='$HOME/scripts/git/open_repo'
 
 # fzf
 alias f='$HOME/scripts/fzf/open_file'
