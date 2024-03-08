@@ -49,7 +49,7 @@ export FZF_DEFAULT_OPTS="
         'if [ -f {} ]; then
             bat {} --color=always;
         elif [ -d {} ]; then
-            exa -la --icons --no-time --git {};
+            eza -la --icons --no-time --git --colour=always {};
         fi'
 "
 
@@ -65,7 +65,7 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
-alias l='exa -la --icons --no-time --git'
+alias l='eza -la --icons --no-time --git'
 alias matlab='/Applications/MATLAB_R2023b.app/bin/matlab -nodesktop -nosplash'
 alias matlabr='$HOME/scripts/matlab_run'
 
