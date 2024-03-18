@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
 SELECTED_DIR=$( (
-	fd -t d . ~/ ~/Documents ~/Downloads ~/test
+	fd -t d . ~/ ~/Documents ~/Downloads ~/test ~/iCloud
 	echo ~/Documents
 	echo ~/Downloads
 	echo ~/test
+	echo ~/iCloud
 ) | fzf)
 
 cd "$SELECTED_DIR" || return

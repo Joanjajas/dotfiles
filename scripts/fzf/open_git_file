@@ -1,10 +1,11 @@
 #!/usr/bin/env sh
 
 SELECTED_PATH=$( (
-	fd . ~/ ~/Documents ~/Downloads ~/test
+	fd . ~/ ~/Documents ~/Downloads ~/test ~/iCloud
 	echo ~/Documents
 	echo ~/Downloads
 	echo ~/test
+	echo ~/iCloud
 ) | fzf)
 
 # if no path was selected, return
@@ -25,5 +26,9 @@ if [ -d "$SELECTED_PATH" ]; then
 	cd "$(git rev-parse --show-toplevel)" || return
 fi
 
-# open the selected path in nvim
-nvim "$SELECTED_PATH"
+# open the selected path in nvim or use open command for pdfs
+if [ "${SELECTED_PATH##*.}" = "pdf" ]; then
+	open "$SELECTED_PATH"
+else
+	nvim "$SELECTED_PATH"
+fi
