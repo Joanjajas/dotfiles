@@ -27,13 +27,12 @@ if [ -d "$SELECTED_PATH" ]; then
 fi
 
 # open the selected path in nvim or use open command for other files
-OPEN_EXTENSIONS="pdf xlsx xls ppt pptx doc docx"
 PATH_EXTENSION="${SELECTED_PATH##*.}"
 
-for EXTENSION in $OPEN_EXTENSIONS; do
+for EXTENSION in pdf xlsx xls ppt pptx doc docx jpg jpeg png; do
 	if [ "$PATH_EXTENSION" = "$EXTENSION" ]; then
 		open "$SELECTED_PATH"
-		exit
+		return
 	fi
 done
 

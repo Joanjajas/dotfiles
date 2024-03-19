@@ -1,11 +1,24 @@
 #!/usr/bin/env sh
 
-SELECTED_DIR=$( (
-	fd -t d . ~/ ~/Documents ~/Downloads ~/test ~/iCloud
+SELECTED_PATH=$( (
+	fd . ~/ ~/Documents ~/Downloads ~/test ~/iCloud
 	echo ~/Documents
 	echo ~/Downloads
 	echo ~/test
 	echo ~/iCloud
 ) | fzf)
 
-cd "$SELECTED_DIR" || return
+# if no directory is selected, exit
+if [ -z "$SELECTED_PATH" ]; then
+	return
+fi
+
+# if the selected path is a file, cd to the directory it is in
+if [ -f "$SELECTED_PATH" ]; then
+	cd "$(dirname "$SELECTED_PATH")" || return
+fi
+
+# if the selected path is a directory, cd to it
+if [ -d "$SELECTED_PATH" ]; then
+	cd "$SELECTED_PATH" || return
+fi
