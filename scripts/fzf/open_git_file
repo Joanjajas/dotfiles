@@ -26,9 +26,15 @@ if [ -d "$SELECTED_PATH" ]; then
 	cd "$(git rev-parse --show-toplevel)" || return
 fi
 
-# open the selected path in nvim or use open command for pdfs
-if [ "${SELECTED_PATH##*.}" = "pdf" ]; then
-	open "$SELECTED_PATH"
-else
-	nvim "$SELECTED_PATH"
-fi
+# open the selected path in nvim or use open command for other files
+OPEN_EXTENSIONS="pdf xlsx xls ppt pptx doc docx"
+PATH_EXTENSION="${SELECTED_PATH##*.}"
+
+for EXTENSION in $OPEN_EXTENSIONS; do
+	if [ "$PATH_EXTENSION" = "$EXTENSION" ]; then
+		open "$SELECTED_PATH"
+		exit
+	fi
+done
+
+nvim "$SELECTED_PATH"
