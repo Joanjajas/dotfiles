@@ -72,6 +72,8 @@ alias matlabr='$HOME/scripts/matlab_run'
 # python
 alias pip='pip3'
 alias python='python3'
+alias da='deactivate'
+alias pa='source .venv/bin/activate'
 
 # git and github
 alias gd='git diff'
