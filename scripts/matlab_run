@@ -8,4 +8,4 @@ if [ ! -f "$FILE" ]; then
 	exit 1
 fi
 
-/Applications/MATLAB_R2023b.app/bin/matlab -batch "run $FILE"
+/Applications/MATLAB_R2024a.app/bin/matlab -batch "run $FILE"
