@@ -3,7 +3,7 @@
 # Check if a repository URL is provided
 if [ -z "$1" ]; then
 	printf "No repository URL provided\n"
-	exit 1
+	return
 fi
 
 # Clone the repository
@@ -13,4 +13,4 @@ git clone "$1"
 REPO_NAME=$(basename "$1" .git)
 
 # Change directory to the cloned repository
-cd "$REPO_NAME" || exit
+cd "$REPO_NAME" || return
