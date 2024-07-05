@@ -1,0 +1,16 @@
+#!/usr/bin/env sh
+
+# Check if a repository URL is provided
+if [ -z "$1" ]; then
+	printf "No repository URL provided\n"
+	exit 1
+fi
+
+# Clone the repository
+git clone "$1"
+
+# Extract the repository name and remove .git extension
+REPO_NAME=$(basename "$1" .git)
+
+# Change directory to the cloned repository
+cd "$REPO_NAME" || exit
