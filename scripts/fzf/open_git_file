@@ -1,10 +1,10 @@
 #!/usr/bin/env sh
 
 SELECTED_PATH=$( (
-	fd . ~/ ~/Documents ~/Downloads ~/test ~/iCloud
+	fd . ~/ ~/Documents ~/Downloads ~/dev ~/iCloud
 	echo ~/Documents
 	echo ~/Downloads
-	echo ~/test
+	echo ~/dev
 	echo ~/iCloud
 ) | fzf)
 

@@ -8,7 +8,7 @@ if [ -z "$URL" ]; then
 	exit
 fi
 
-git clone "$URL" ~/test/"$REPO_NAME" || exit
-cd ~/test/"$REPO_NAME" || exit
+git clone "$URL" ~/dev/"$REPO_NAME" || exit
+cd ~/dev/"$REPO_NAME" || exit
 nvim .
-rm -rf ~/test/"$REPO_NAME"
+rm -rf ~/dev/"$REPO_NAME"
