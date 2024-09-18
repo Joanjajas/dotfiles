@@ -74,6 +74,7 @@ alias pip='pip3'
 alias python='python3'
 alias da='deactivate'
 alias pa='source .venv/bin/activate'
+alias pa='. $HOME/scripts/venv'
 
 # git and github
 alias gd='git diff'
@@ -89,7 +90,7 @@ alias or='$HOME/scripts/git/open_repo'
 
 # fzf
 alias f='$HOME/scripts/fzf/open_file'
-alias fp='. $HOME/scripts/fzf/open_git_file'
+alias fp='. $HOME/scripts/fzf/open_git_repo'
 alias ff='. $HOME/scripts/fzf/cd_dir'
 alias fgs='$HOME/scripts/fzf/git_status'
 alias frg='$HOME/scripts/fzf/ripgrep'
