@@ -137,6 +137,9 @@ _fzf_compgen_dir() {
 # Startup
 ################################################################################
 
+# activate python venv
+. $HOME/scripts/venv
+
 # run tmux on startup or attach to existing session
 if [ -z "$TMUX" ]; then
     tmux new-session -A
