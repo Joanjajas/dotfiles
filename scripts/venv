@@ -4,7 +4,6 @@ CURRENT_DIR=$(pwd)
 GIT_DIR=$(git rev-parse --show-toplevel)
 
 while [ "$CURRENT_DIR" != "$(dirname $GIT_DIR)" ] && [ "$CURRENT_DIR" != "$(dirname $HOME)" ]; do
-	echo "Current dir: $CURRENT_DIR"
 	if [ -f "$CURRENT_DIR/.venv/bin/activate" ]; then
 		source "$CURRENT_DIR/.venv/bin/activate"
 		break
