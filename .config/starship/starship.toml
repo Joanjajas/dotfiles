@@ -1,5 +1,5 @@
 format = '''
-$username$hostname$os$directory$git_commit$git_branch$python$git_status$character$git_state
+$username$hostname$os$directory$git_commit$git_branch$python$conda$git_status$character$git_state
 '''
 
 add_newline = false
@@ -37,6 +37,11 @@ Macos = ""
 
 [python]
 format = '[( \[$virtualenv\] )]($style)'
+
+[conda]
+ignore_base = false
+style = "#d1b03a"
+format = '[󱔎 \[$environment\] ]($style)'
 
 [character]
 success_symbol = "[](#d1b03a)"

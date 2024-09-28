@@ -72,9 +72,8 @@ alias matlabr='$HOME/scripts/matlab_run'
 # python
 alias pip='pip3'
 alias python='python3'
-alias da='deactivate'
-alias pa='source .venv/bin/activate'
-alias pa='. $HOME/scripts/venv'
+alias da='conda deactivate'
+alias pa='. $HOME/scripts/conda'
 
 # git and github
 alias gd='git diff'
@@ -137,10 +136,21 @@ _fzf_compgen_dir() {
 # Startup
 ################################################################################
 
-# activate python venv
-. $HOME/scripts/venv
-
 # run tmux on startup or attach to existing session
 if [ -z "$TMUX" ]; then
     tmux new-session -A
 fi
+
+# conda
+__conda_setup="$('/Users/joan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/joan/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/joan/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/joan/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+

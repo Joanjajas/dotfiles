@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+GIT_DIR=$(git rev-parse --show-toplevel)
+conda activate $(basename $GIT_DIR) >/dev/null 2>&1 || return
