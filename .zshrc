@@ -67,7 +67,6 @@ alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
 alias l='eza -la --icons --no-time --git'
 alias matlab='/Applications/MATLAB_R2024a.app/bin/matlab -nodesktop -nosplash'
-alias matlabr='$HOME/scripts/matlab_run'
 
 # python
 alias pip='pip3'
@@ -82,17 +81,16 @@ alias ghe='gh copilot explain'
 alias ghs='gh copilot suggest'
 alias ghb='gh browse'
 alias gra='git restore .'
-alias gl='. $HOME/scripts/git/git_clone'
-alias gc='$HOME/scripts/git/git_commit_push'
-alias gr='$HOME/scripts/fzf/git_restore'
+alias gc='. $HOME/scripts/git/clone'
+alias gp='$HOME/scripts/git/commit_and_push'
+alias gr='$HOME/scripts/git/restore'
 alias or='$HOME/scripts/git/open_repo'
 
-# fzf
-alias f='$HOME/scripts/fzf/open_file'
-alias fp='. $HOME/scripts/fzf/open_git_repo'
-alias ff='. $HOME/scripts/fzf/cd_dir'
-alias fgs='$HOME/scripts/fzf/git_status'
-alias frg='$HOME/scripts/fzf/ripgrep'
+# file opening
+alias f='. $HOME/scripts/fs/open'
+alias ff='. $HOME/scripts/fs/cd'
+alias fgs='$HOME/scripts/git/status'
+alias frg='$HOME/scripts/fs/ripgrep'
 
 ################################################################################
 # Sources
@@ -117,20 +115,6 @@ setopt HIST_IGNORE_SPACE
 # case insensitive completion
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit -d $HOME/.cache/zsh/zcompdump
-
-################################################################################
-# Fzf options
-################################################################################
-
-# fzf complete path
-_fzf_compgen_path() {
-    $HOME/scripts/fzf/completion_path
-}
-
-# fzf complete dir
-_fzf_compgen_dir() {
-    $HOME/scripts/fzf/completion_dir
-}
 
 ################################################################################
 # Startup
