@@ -27,7 +27,9 @@ bindkey -M viins '^P' fzf-history-widget
 ################################################################################
 # Env vars
 ################################################################################
+export PATH=$HOME/dev/ruit_flutter/.sdk/flutter/bin:$PATH
 export EDITOR=nvim
+export TERM=screen-256color
 export LESSHISTFILE=-
 export CARGO_HOME=$HOME/.config/cargo
 export RUSTUP_HOME=$HOME/.config/rustup
@@ -75,6 +77,7 @@ alias da='conda deactivate'
 alias pa='. $HOME/scripts/conda'
 
 # git and github
+alias lg='lazygit'
 alias gd='git diff'
 alias gs='git status'
 alias ghe='gh copilot explain'

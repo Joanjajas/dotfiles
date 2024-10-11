@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-RG_PREFIX="rg --column --line-number --no-heading --color=always --smart-case --colors 'match:fg:green' --colors 'path:fg:blue' --colors 'line:fg:yellow'"
+RG_PREFIX="rg -g '!*.{pdf,lock,sql,ipynb}' --column --line-number --no-heading --color=always --smart-case --colors 'match:fg:green' --colors 'path:fg:blue' --colors 'line:fg:yellow'"
 
 fzf --ansi --disabled \
 	--bind "start:reload:$RG_PREFIX {q}  ~/ ~/Documents ~/Downloads ~/dev ~/iCloud" \
