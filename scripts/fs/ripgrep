@@ -11,4 +11,4 @@ fzf --ansi --disabled \
 	--delimiter : \
 	--preview 'bat --color=always {1} --highlight-line {2}' \
 	--preview-window '+{2}+3/3,~3' \
-	--bind 'enter:become(nvim {1} +{2})'
+	--bind 'enter:become(cd "$(dirname {1})" && cd "$(git rev-parse --show-toplevel)" && nvim {1} +{2})'
