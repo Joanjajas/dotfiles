@@ -29,14 +29,13 @@ bindkey -M viins '^P' fzf-history-widget
 ################################################################################
 export PATH=$HOME/dev/ruit_flutter/.sdk/flutter/bin:$PATH
 export EDITOR=nvim
-export TERM=screen-256color
+export TERM=xterm-256color
 export LESSHISTFILE=-
 export CARGO_HOME=$HOME/.config/cargo
 export RUSTUP_HOME=$HOME/.config/rustup
 export HISTFILE=$HOME/.cache/zsh/zsh_history
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 export MANPAGER='nvim +Man!'
-export FZF_COMPLETION_TRIGGER='__'
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}'
   --preview-window hidden:wrap
@@ -68,7 +67,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias clear='printf "\33c\e[3J"'
 alias l='eza -la --icons --no-time --git'
-alias matlab='/Applications/MATLAB_R2024a.app/bin/matlab -nodesktop -nosplash'
+alias dc='docker-compose'
+alias d='docker'
 
 # python
 alias pip='pip3'
@@ -98,7 +98,6 @@ alias frg='. $HOME/scripts/fs/ripgrep'
 ################################################################################
 # Sources
 ################################################################################
-source "/opt/homebrew/opt/fzf/shell/completion.zsh"
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
 source "$HOME/.config/cargo/env"
 
