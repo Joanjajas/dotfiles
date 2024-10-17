@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+
+GIT_DIR=$(git rev-parse --show-toplevel)
+
+if [ -f "$GIT_DIR/.venv/bin/activate" ] && [ -z "$VIRTUAL_ENV" ]; then
+	. "$GIT_DIR/.venv/bin/activate"
+fi
+
+if [ ! -f "$GIT_DIR/.venv/bin/activate" ] && [ -n "$VIRTUAL_ENV" ]; then
+	deactivate
+fi

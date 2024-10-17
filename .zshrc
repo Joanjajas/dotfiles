@@ -73,8 +73,7 @@ alias d='docker'
 # python
 alias pip='pip3'
 alias python='python3'
-alias da='conda deactivate'
-alias pa='. $HOME/scripts/conda'
+alias da='deactivate'
 
 # git and github
 alias lg='lazygit'
@@ -94,6 +93,11 @@ alias f='. $HOME/scripts/fs/open'
 alias ff='. $HOME/scripts/fs/cd'
 alias fgs='. $HOME/scripts/git/status'
 alias frg='. $HOME/scripts/fs/ripgrep'
+
+cd() {
+    builtin cd "$@" || return
+    . $HOME/scripts/venv
+}
 
 ################################################################################
 # Sources
@@ -125,21 +129,11 @@ autoload -Uz compinit && compinit -d $HOME/.cache/zsh/zcompdump
 # Startup
 ################################################################################
 
+# handle virtual envs
+. $HOME/scripts/venv
+
 # run tmux on startup or attach to existing session
 if [ -z "$TMUX" ]; then
     tmux new-session -A
 fi
-
-# conda
-__conda_setup="$('/Users/joan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/joan/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/joan/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/joan/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
 
