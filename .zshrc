@@ -21,8 +21,8 @@ https://github.com/joanjajas/dotfiles
 bindkey -v
 bindkey -v '^?' backward-delete-char
 bindkey -M viins kj vi-cmd-mode
-bindkey -M emacs '^I' fzf-history-widget
-bindkey -M viins '^I' fzf-history-widget
+bindkey -M emacs '^o' fzf-history-widget
+bindkey -M viins '^o' fzf-history-widget
 
 ################################################################################
 # Env vars
