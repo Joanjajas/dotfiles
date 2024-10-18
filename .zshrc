@@ -71,8 +71,8 @@ alias dc='docker-compose'
 alias d='docker'
 
 # python
-alias pip='pip3'
-alias python='python3'
+alias pip=/opt/homebrew/bin/pip3
+alias python=/opt/homebrew/bin/python3
 alias da='deactivate'
 
 # git and github
