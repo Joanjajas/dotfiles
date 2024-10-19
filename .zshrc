@@ -16,6 +16,18 @@ https://github.com/joanjajas/dotfiles
 '
 
 ################################################################################
+# Evals
+################################################################################
+eval "$(starship init zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
+################################################################################
+# Sources
+################################################################################
+source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
+source "$HOME/.config/cargo/env"
+
+################################################################################
 # Keybinds
 ################################################################################
 bindkey -v
@@ -28,6 +40,7 @@ bindkey -M viins '^o' fzf-history-widget
 # Env vars
 ################################################################################
 export PATH=$HOME/dev/ruit_flutter/.sdk/flutter/bin:$PATH
+export PATH="$(brew --prefix python)/libexec/bin:$PATH"
 export EDITOR=nvim
 export TERM=xterm-256color
 export LESSHISTFILE=-
@@ -71,8 +84,6 @@ alias dc='docker-compose'
 alias d='docker'
 
 # python
-alias pip=/opt/homebrew/bin/pip3
-alias python=/opt/homebrew/bin/python3
 alias da='deactivate'
 
 # git and github
@@ -97,18 +108,6 @@ cd() {
     builtin cd "$@" || return
     . $HOME/scripts/venv
 }
-
-################################################################################
-# Sources
-################################################################################
-source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
-source "$HOME/.config/cargo/env"
-
-################################################################################
-# Evals
-################################################################################
-eval "$(starship init zsh)"
-eval "$(/opt/homebrew/bin/brew shellenv)"
 
 ################################################################################
 # Zsh options
