@@ -86,7 +86,6 @@ alias gra='git restore .'
 alias gc='. $HOME/scripts/git/clone'
 alias gp='$HOME/scripts/git/commit_and_push'
 alias gr='$HOME/scripts/git/restore'
-alias or='$HOME/scripts/git/open_repo'
 
 # file opening
 alias f='. $HOME/scripts/fs/open'
