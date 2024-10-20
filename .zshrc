@@ -85,6 +85,7 @@ alias d='docker'
 
 # python
 alias da='deactivate'
+alias py='python'
 
 # git and github
 alias lg='lazygit'
