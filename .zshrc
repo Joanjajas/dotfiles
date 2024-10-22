@@ -106,8 +106,12 @@ alias fgs='. $HOME/scripts/git/status'
 alias frg='. $HOME/scripts/fs/ripgrep'
 
 cd() {
-    builtin cd "$@" || return
-    . $HOME/scripts/venv
+    if builtin cd "$@" 2>/dev/null; then
+        . $HOME/scripts/venv
+    else
+        echo "cd: no such file or directory: $1"
+        return 1
+    fi
 }
 
 ################################################################################
