@@ -1,13 +1,12 @@
 #!/usr/bin/env sh
 
 GIT_DIR=$(git rev-parse --show-toplevel)
-DIR="$HOME/venvs/$(basename $GIT_DIR)"
+VENV_DIR="$HOME/venvs/$(basename $GIT_DIR)"
 
-# if the directory is a git repo and there is no other virtualenv activated then activate the virtualenv
-if [ -d "$DIR" ] && [ -z "$VIRTUAL_ENV" ]; then
-    . "$DIR/bin/activate"
+if [ -d "$VENV_DIR" ] && [ "$VIRTUAL_ENV" != "$VENV_DIR" ]; then
+    . "$VENV_DIR/bin/activate"
 fi
 
-if [ ! -d "$DIR" ] && [ -n "$VIRTUAL_ENV" ]; then
+if [ ! -d "$VENV_DIR" ] && [ -n "$VIRTUAL_ENV" ]; then
 	deactivate
 fi
