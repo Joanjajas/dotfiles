@@ -1,12 +1,12 @@
 #!/usr/bin/env sh
 
 GIT_DIR=$(git rev-parse --show-toplevel)
-VENV_DIR="$HOME/venvs/$(basename $GIT_DIR)"
+VENV_DIR="$GIT_DIR/venv/$(basename $GIT_DIR)"
 
 if [ -d "$VENV_DIR" ] && [ "$VIRTUAL_ENV" != "$VENV_DIR" ]; then
-    . "$VENV_DIR/bin/activate"
+    . "$VENV_DIR/bin/activate" >/dev/null 2>&1
 fi
 
 if [ ! -d "$VENV_DIR" ] && [ -n "$VIRTUAL_ENV" ]; then
-	deactivate
+    deactivate >/dev/null 2>&1
 fi
