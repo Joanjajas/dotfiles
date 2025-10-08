@@ -25,7 +25,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Sources
 ################################################################################
 source "/opt/homebrew/opt/fzf/shell/key-bindings.zsh"
-source "$HOME/.config/cargo/env"
+# source "$HOME/.config/cargo/env"
 
 ################################################################################
 # Keybinds
@@ -89,6 +89,7 @@ alias py='python'
 
 # git and github
 alias lg='lazygit'
+alias ld='lazydocker'
 alias gd='git diff'
 alias gs='git status'
 alias ghe='gh copilot explain'
