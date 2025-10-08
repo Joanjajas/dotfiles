@@ -4,6 +4,7 @@
 !nvim
 !starship
 !alacritty
+!vimium
 
 # ignore everything in tmux except tmux.conf
 !tmux
