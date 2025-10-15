@@ -1,7 +1,7 @@
 {
   "keyMappings": "unmap o\nunmap b\nunmap B\nunmap O\n\nmap o Vomnibar.activateInNewTab\nmap b Vomnibar.activate\nmap B Vomnibar.activateBookmarks\nmap t Vomnibar.activateTabSelection",
   "grabBackFocus": true,
-  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ny: https://www.youtube.com/results?search_query=%s Youtube\ngm: https://www.google.com/maps?q=%s Google maps\ngh: https://www.github.com//search?q=%s&type=repositories Github\nch: https://www.chatgpt.com/?q=%s Chatgpt\ng: https://www.google.com/search?q=%s Google",
+  "searchEngines": "w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s Wikipedia\ny: https://www.youtube.com/results?search_query=%s Youtube\ngm: https://www.google.com/maps?q=%s Google maps\ngh: https://www.github.com//search?q=%s&type=repositories Github\nch: https://www.chatgpt.com/?q=%s Chatgpt\ng: https://www.google.com/search?q=%s Google\nts: https://translate.google.com/?sl=en&tl=es&text=%s&op=translate Translate to Spanish\nte: https://translate.google.com/?sl=es&tl=en&text=%s&op=translate Translate to English\nrae: https://dle.rae.es/%s?m=form RAE",
   "settingsVersion": "2.3",
   "exclusionRules": [
     {
@@ -11,6 +11,10 @@
     {
       "passKeys": "fmckjl",
       "pattern": "https?://www.twitch.tv/*"
+    },
+    {
+      "passKeys": "fmckjl",
+      "pattern": "https?://kick.com/*"
     }
   ]
 }
